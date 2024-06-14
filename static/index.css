@@ -1,0 +1,275 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+   
+}
+body {
+    margin: 20px;
+    background-color: #d1dedd;
+    font-family: 'Courier New', Courier, monospace;
+}
+h1,h2,h3,p {
+    color: #767f7e;
+    
+}
+body {
+    display: block;
+}
+.logo img {
+    width: 70px;
+    height: 70px;
+   
+    padding: 0;
+    
+}
+.logo h2 {
+    color:white;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+header {
+    display: flex;
+    
+    align-items: center;
+    height: 170px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgb(28, 89, 143);
+    
+    
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 20px 20px;
+    height: 60px;
+  
+    
+    
+    
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+    
+   
+}
+.links a {
+    color:white;
+    font-size: 18px;
+}
+h2 {
+    font-size: 20px;
+}
+.menu img {
+    display: none;
+    color: white;
+    background-color: white;
+    
+    border-radius: 10px;
+    
+}
+.navbar {
+    position:fixed;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    
+    display: none;
+    margin-block: 10px;
+    width: 100%;
+    background-color:#d1dedd;
+    padding: 5px;
+    
+    
+}
+.navbar a {
+    color:rgba(0, 0, 0, 0.555);
+    font-size: 18px;
+
+}
+.navbar.active {
+    display:block ;
+}
+
+
+
+/* responsive */
+
+@media  (max-width: 766px) {
+    .links {
+        display: none;
+    }
+    .menu img {
+        display: block;
+        
+    }
+  
+  }
+  .header {
+    max-width: 1200px;
+    margin: 80px auto;
+    border-bottom: 1px solid gray;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 35px;
+    max-width: 1200px;
+   
+    margin: 20px auto;
+    border-bottom: 1px solid #1a1222ab;
+    padding-bottom: 40px;
+    
+    
+}
+
+article img,article.featured img {
+    width: 100%;
+    border: 2px solid rgba(49, 5, 5, 0.288);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    
+}
+
+
+.grid .featured a:hover img {
+    transform: scale(1.1); 
+}
+
+.grid .featured a img:hover h2 {
+    margin-top: 20px; 
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    
+    
+    
+}
+.grid .featured a h2:hover {
+    text-decoration: underline;
+}
+
+.grid article a:hover img {
+    transform: scale(1.1);
+}
+.grid article  a h3:hover {
+    text-decoration: underline;
+}
+
+.a .root a:hover img {
+    transform: scale(1.1);
+}
+.a .root a h3:hover {
+    text-decoration: underline;
+}
+.wrapper .last .box a:hover img {
+    transform: scale(1.1);
+}
+.wrapper .last .box h3:hover {
+    text-decoration: underline;
+}
+
+
+
+
+article.featured {
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    align-items: center;
+    border-bottom: 1px solid #1a1222ab;
+    padding-bottom: 40px;
+    
+    padding-bottom: 40px;
+    color:black;
+
+}
+article p, article h3,.box h3 {
+    margin: 20px 10px;
+    
+}
+/* responsive */
+@media screen and (max-width:980px) {
+    article {
+        grid-column: span 3;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        align-items: center;
+        
+    }
+}
+
+@media screen and (max-width:760px) {
+    article ,article.featured {
+        display: block;
+        margin: 0 20px;
+      
+        
+    }
+   .a > .root {
+    display: block;
+   }
+}
+.navbar hr {
+    color: rgb(28, 89, 143);
+}
+.root {
+    display: grid;
+    grid-template-columns: 1fr  1fr;
+    gap: 35px;
+    max-width: 1200px;
+   
+    margin: 20px auto;
+    align-items: center;
+    border-bottom: 1px solid #1a1222ab;
+    padding-bottom: 40px;
+}
+.root img {
+    width: 100%;
+}
+.wrapper {
+    max-width: 1200px;
+    margin: 80px auto;
+
+}
+.last {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 35px;
+}
+.box  a img {
+    width: 100%;
+    border: 2px solid rgba(49, 5, 5, 0.288);
+    border-radius: 8px;
+}
+.box > h3 {
+    font-size: 1rem;
+}
+footer {
+    background-color: rgba(0, 0, 0, 0.705);
+    color: white;
+    
+   
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    margin-bottom: 0;
+}
+
+

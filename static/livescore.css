@@ -1,0 +1,94 @@
+
+
+:root {
+    --main-color: #ff702a;
+    --text-color: #fff;
+    --bg-color: #1e1c2a;
+    --big-font: 5rem;
+    --h2-font: 2.25;
+    --p-font: 0.9rem;
+}
+.links a, .navbar a {
+    text-decoration: none;
+    list-style: none;
+}
+.head img {
+    
+    border-radius: 8px;
+    width: 50px;
+    
+}
+
+main {
+    max-width: 1200px;
+    margin: 80px auto;
+    margin-inline: auto;
+    display: grid;
+    gap: 20px;
+    
+}
+.head {
+    display: flex;
+    align-items: center;
+    margin: 80px auto;
+    padding: 5px;
+    margin: 20px auto;
+    gap: 5px;
+    align-items: center;
+    background-color: rgba(240, 248, 255, 0.144);
+    
+    
+}
+.bottom {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 5px;
+    
+    
+}
+.header-2 {
+    text-align: center;
+}
+ main h1 {
+    font-size: 30px;
+    
+ }
+ main p {
+    line-height: 40px;
+    font-size: 24px;
+ }
+ .social {
+    
+        width: 220px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    
+ }
+ .social a  {
+    height: 40px;
+    width: 40px;
+    background: var(--main-color);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    transition: .4s;
+}
+.social a :hover {
+    height: 40px;
+    width: 40px;
+    background: var(--main-color);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    transition: .4s;
+    color: #1e1c2a;
+    background:#fff;
+}
