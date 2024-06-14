@@ -1,3 +1,6 @@
+
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,8 +9,8 @@
     <title>Sport page</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500;600;700;800;900&display=swap"
     rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="livescore.css">
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+    <link rel="stylesheet" href="{% static 'livescore.css' %}">
    
 
 </head>
@@ -15,20 +18,20 @@
     <!--navbar-->
     <header>
         <div class="logo">
-            <img src="img/1-removebg-preview.png" alt="">
+            <img src="{% static 'img/1-removebg-preview.png' %}" alt="">
             <h2>sport page</h2>
         </div>
         
         <div class="menu" id="menu-icon" >
-            <img src="img/bx-menu.png" alt="" id="menu-icon">
+            <img src="{% static 'img/bx-menu.png' %}" alt="" id="menu-icon">
         </div>
         
         <ul class="links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="livescore.html">Livescores</a></li>
-            <li><a href="news.html">Breaking News</a></li>
-            <li><a href="transfer.html">Tranfers</a></li>
-            <li><a href="About.html">About us</a></li>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'livescore' %}">Livescores</a></li>
+            <li><a href="{% url 'news' %}">Breaking News</a></li>
+            <li><a href="{% url 'transfer' %}">Tranfers</a></li>
+            <li><a href="{% url 'about' %}">About us</a></li>
 
         </ul>
 
@@ -37,15 +40,18 @@
        
     </header>
     <ul class="navbar" id="navbar">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="{% url 'index' %}">Home</a></li>
         <hr>
-        <li><a href="livescore.html">Livescores</a></li>
+        <li><a href="{% url 'livescore' %}">Livescores</a></li>
         <hr>
-        <li><a href="news.html">Breaking News</a></li>
+      
+        <li><a href="{% url 'news' %}">Breaking News</a></li>
         <hr>
-        <li><a href="transfer.html">Tranfers</a></li>
+      
+        <li><a href="{% url 'transfer' %}">Tranfers</a></li>
         <hr>
-        <li><a href="About.html">About us</a></li>
+      
+        <li><a href="{% url 'about' %}">About us</a></li>
         <hr>
 
 </ul>
@@ -63,7 +69,7 @@
 <div class="premiere">
     
         <div class="head">
-            <img src="img/p-logo-removebg-preview.png" alt="" width="150px">
+            <img src="{% static 'img/p-logo-removebg-preview.png' %}" alt="" width="150px">
             <h3>England-Premier league</h3>
         </div>
         <div class="bottom">
@@ -76,7 +82,7 @@
 <div class="laliga">
     
     <div class="head">
-        <img src="img/laliga.png" alt="" width="150px">
+        <img src="{% static 'img/laliga.png' %}" alt="" width="150px">
         <h3>Spain-Laliga</h3>
     </div>
     <div class="bottom">
@@ -88,7 +94,7 @@
 <div class="seria a">
     
     <div class="head">
-        <img src="img/serie a.jpg" alt="" width="150px">
+        <img src="{% static 'img/serie a.jpg' %}" alt="" width="150px">
         <h3>Italy-Serie A</h3>
     </div>
     <div class="bottom">
@@ -104,7 +110,7 @@
     <div class="FA ">
     
         <div class="head">
-            <img src="img/fa.png" alt="" width="150px">
+            <img src="{% static 'img/fa.png' %}" alt="" width="150px">
             <h3>England-FA cup</h3>
         </div>
         <div class="bottom">
@@ -117,7 +123,7 @@
         <div class="seria a">
     
             <div class="head">
-                <img src="img/serie a.jpg" alt="" width="150px">
+                <img src="{% static 'img/serie a.jpg' %}" alt="" width="150px">
                 <h3>Italy-Serie A</h3>
             </div>
             <div class="bottom">
@@ -144,7 +150,7 @@
     
 
 
-    <script src="index.js"></script>
+    <script src="{% static 'index.js' %}"></script>
 
 </body>
 </html>

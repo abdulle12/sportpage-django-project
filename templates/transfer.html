@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,7 @@
     <title>Sport page</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500;600;700;800;900&display=swap"
     rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="{% static 'index.css' %}">
    
 
 </head>
@@ -14,20 +15,20 @@
     <!--navbar-->
     <header>
         <div class="logo">
-            <img src="img/1-removebg-preview.png" alt="">
+            <img src="{% static 'img/1-removebg-preview.png' %}" alt="">
             <h2>sport page</h2>
         </div>
         
         <div class="menu" id="menu-icon" >
-            <img src="img/bx-menu.png" alt="" id="menu-icon">
+            <img src="{% static 'img/bx-menu.png' %}" alt="" id="menu-icon">
         </div>
         
         <ul class="links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="livescore.html">Livescores</a></li>
-            <li><a href="news.html">Breaking News</a></li>
-            <li><a href="transfer.html">Tranfers</a></li>
-            <li><a href="About.html">About us</a></li>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'livescore' %}">Livescores</a></li>
+            <li><a href="{% url 'news' %}">Breaking News</a></li>
+            <li><a href="{% url 'transfer' %}">Tranfers</a></li>
+            <li><a href="{% url 'about' %}">About us</a></li>
 
         </ul>
 
@@ -36,18 +37,18 @@
        
     </header>
     <ul class="navbar" id="navbar">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="{% url 'index' %}">Home</a></li>
         <hr>
-        <li><a href="livescore.html">Livescores</a></li>
-        <hr>
-      
-        <li><a href="news.html">Breaking News</a></li>
+        <li><a href="{% url 'livescore' %}">Livescores</a></li>
         <hr>
       
-        <li><a href="transfer.html">Tranfers</a></li>
+        <li><a href="{% url 'news' %}">Breaking News</a></li>
         <hr>
       
-        <li><a href="About.html">About us</a></li>
+        <li><a href="{% url 'transfer' %}">Tranfers</a></li>
+        <hr>
+      
+        <li><a href="{% url 'about' %}">About us</a></li>
         <hr>
       
 
@@ -64,7 +65,7 @@
     <!--article 1-->
     <article class="featured">
         
-            <a href="tranfers-article/tranfer-article-1.html"><img src="tranfers-article/img/tranfer-image-1.webp" alt=""></a>
+            <a href="tranfers-article/tranfer-article-1.html"><img src="{% static 'tranfers-article/img/tranfer-image-1.webp' %}" alt=""></a>
             <div class="showcase">
                 <a href="tranfers-article/tranfer-article-1.html">
                     <h2> Liverpool & Mancity tracking  Pedro Neto on £60 million
@@ -78,7 +79,7 @@
 
 
     <article>
-        <a href="tranfers-article/tranfer-article-2.html"><img src="tranfers-article/img/tranfer-image-2.webp" alt=""></a>
+        <a href="tranfers-article/tranfer-article-2.html"><img src="{% static 'tranfers-article/img/tranfer-image-2.webp' %}" alt=""></a>
         <div>
             <a href="tranfers-article/tranfer-article-2.html">
                 <h3>Paris Saint-Germain boss Luis Enrique seemed to confirm Kylian Mbappe's imminent departure</h3>
@@ -87,7 +88,7 @@
     </article>
     <!--article 3-->
     <article>
-        <a href="tranfers-article/tranfer-article-3.html"><img src="tranfers-article/img/tranfer-image-3.webp" alt=""></a>
+        <a href="tranfers-article/tranfer-article-3.html"><img src="{% static 'tranfers-article/img/tranfer-image-3.webp' %}" alt=""></a>
         <div>
             <a href="tranfers-article/tranfer-article-3.html">
                 <h3>Mohamed Salah admits he will leave Liverpool one day</h3>
@@ -97,7 +98,7 @@
     <!--article 4-->
 
     <article>
-        <a href="tranfers-article/tranfer-article-4.html"><img src="tranfers-article/img/tranfer-image-4.webp" alt=""></a>
+        <a href="tranfers-article/tranfer-article-4.html"><img src="{% static 'tranfers-article/img/tranfer-image-4.webp' %}" alt=""></a>
         <div>
             <a href="tranfers-article/tranfer-article-4.html">
                 <h3>Lukaku kept Liverpool from making Man City star Jeremy Doku </h3>
@@ -116,7 +117,7 @@
 <section class="a">
      <!--article 5-->
     <article class="root">
-        <a href="tranfers-article/tranfer-article-5.html"><img src="tranfers-article/img/tranfer-image-5.webp" alt=""></a>
+        <a href="tranfers-article/tranfer-article-5.html"><img src="{% static 'tranfers-article/img/tranfer-image-5.webp' %}" alt=""></a>
         <a href="tranfers-article/tranfer-article-5.html">
             <h3>Paris Saint-Germain are plotting an ambitious €200m offer for Barcelona youngster Lamine Yamal</h3>
         </a>
@@ -129,7 +130,7 @@
     <div class="last">
             <!--article 6-->
         <div class="box">
-            <a href="tranfers-article/tranfer-article-6.html"><img src="tranfers-article/img/tranfer-image-8.webp" alt=""></a>
+            <a href="tranfers-article/tranfer-article-6.html"><img src="{% static 'tranfers-article/img/tranfer-image-8.webp' %}" alt=""></a>
             <a href="tranfers-article/tranfer-article-6.html">
                 <h3>
                     Erling Haaland will reportedly demand a release clause 
@@ -140,7 +141,7 @@
             <!--article 7-->
 
         <div class="box">
-            <a href="tranfers-article/tranfer-article-7.html"><img src="tranfers-article/img/transfer-image-7.webp" alt=""></a>
+            <a href="tranfers-article/tranfer-article-7.html"><img src="{% static 'tranfers-article/img/transfer-image-7.webp' %}" alt=""></a>
             <a href="tranfers-article/tranfer-article-7.html">
                 <h3>American defender Sergino Dest, who has played a crucial role for PSV this season
                 </h3>
@@ -150,7 +151,7 @@
             <!--article 8-->
 
         <div class="box">
-            <a href="tranfers-article/tranfer-article-8.html"><img src="tranfers-article/img/tranfer-image-9.webp" alt=""></a>
+            <a href="tranfers-article/tranfer-article-8.html"><img src="{% static 'tranfers-article/img/tranfer-image-9.webp' %}" alt=""></a>
             <a href="tranfers-article/tranfer-article-8.html">
                 <h3>Why Man City are relieved Kylian Mbappe is leaving PSG for Real Madrid
                 </h3>
@@ -161,7 +162,7 @@
             <!--article 9-->
 
             <div class="box">
-                <a href="tranfers-article/tranfer-article-9.html"><img src="tranfers-article/img/tranfer-image-10.webp" alt=""></a>
+                <a href="tranfers-article/tranfer-article-9.html"><img src="{% static 'tranfers-article/img/tranfer-image-10.webp' %}" alt=""></a>
                 <a href="tranfers-article/tranfer-article-9.html">
                     <h3>Harry Kane backed for Premier League return from Bayern Munich
                     </h3>
@@ -181,7 +182,7 @@
     
 
 
-    <script src="index.js"></script>
+    <script src="{% static 'index.js' %}"></script>
 
 </body>
 </html>

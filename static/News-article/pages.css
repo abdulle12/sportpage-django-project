@@ -1,0 +1,164 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+   
+}
+body {
+    margin: 20px;
+    background-color: #d1dedd;
+    font-family: 'Courier New', Courier, monospace;
+}
+h1,h2,h3,p {
+    color: #767f7e;
+    
+}
+body {
+    display: block;
+}
+.logo img {
+    width: 70px;
+    height: 70px;
+   
+    padding: 0;
+    
+}
+.logo h2 {
+    color:white;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+header {
+    display: flex;
+    
+    align-items: center;
+    height: 170px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgb(28, 89, 143);
+    
+    
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 20px 20px;
+    height: 60px;
+  
+    
+    
+    
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+    
+   
+}
+.links a {
+    color:white;
+    font-size: 18px;
+}
+h2 {
+    font-size: 20px;
+}
+.menu img {
+    display: none;
+    color: white;
+    background-color: white;
+    
+    border-radius: 10px;
+    
+}
+.navbar {
+    position:fixed;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    
+    display: none;
+    margin-block: 10px;
+    width: 100%;
+    background-color:#d1dedd;
+    padding: 5px;
+    
+    
+}
+.navbar a {
+    color:rgba(0, 0, 0, 0.555);
+    font-size: 18px;
+
+}
+.navbar.active {
+    display:block ;
+}
+
+
+
+/* responsive */
+
+@media  (max-width: 766px) {
+    .links {
+        display: none;
+    }
+    .menu img {
+        display: block;
+        
+    }
+  
+  }
+  .header {
+    max-width: 1200px;
+    margin: 80px auto;
+    border-bottom: 1px solid gray;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+
+/* responsive */
+
+
+.navbar hr {
+    color: rgb(28, 89, 143);
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.705);
+    color: white;
+    
+   
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    margin-bottom: 0;
+}
+.main {
+    max-width: 1200px;
+    margin: 50px auto;
+    display: grid;
+    gap: 40px;
+}
+.main p {
+    line-height: 27px;
+    font-size: 98%;
+  
+
+}
+.main img {
+    width: 100%;
+    border: 2px solid rgba(49, 5, 5, 0.288);
+    border-radius: 8px;
+}
+
+
+
