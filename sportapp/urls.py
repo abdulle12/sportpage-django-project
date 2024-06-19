@@ -16,6 +16,14 @@ urlpatterns = [
     path('home-article-6/',views.home_articlef,name='home-article-6'),
     path('home-article-7/',views.home_articleg,name='home-article-7'),
     path('home-article-8/',views.home_articleh,name='home-article-8'),
+    path('news-article-1/',views.newsa,name='news-article-1'),
+    path('news-article-2/',views.newsb,name='news-article-2'),
+    path('news-article-3/',views.newsc,name='news-article-3'),
+    path('news-article-4/',views.newsd,name='news-article-4'),
+    path('news-article-5/',views.newse,name='news-article-5'),
+    path('news-article-9/',views.newsf,name='news-article-9'),
+    
+    
 
     
     

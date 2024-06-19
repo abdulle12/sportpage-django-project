@@ -31,3 +31,15 @@ def home_articleg(request):
     return render(request,'home-article-7.html')
 def home_articleh(request):
     return render(request,'home-article-8.html')
+def newsa(request):
+    return render(request,'News-article/news-article-1.html')
+def newsb(request):
+    return render(request,'News-article/news-article-2.html')
+def newsc(request):
+    return render(request,'News-article/news-article-3.html')
+def newsd(request):
+    return render(request,'News-article/news-article-4.html')
+def newse(request):
+    return render(request,'News-article/news-article-5.html')
+def newsf(request):
+    return render(request,'News-article/news-article-9.html')
