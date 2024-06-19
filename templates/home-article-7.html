@@ -1,3 +1,5 @@
+
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +8,7 @@
     <title>Sport page</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500;600;700;800;900&display=swap"
     rel="stylesheet">
-    <link rel="stylesheet" href="page.css">
+    <link rel="stylesheet" href="{% static 'page.css' %}">
    
 
 </head>
@@ -14,20 +16,21 @@
     <!--navbar-->
     <header>
         <div class="logo">
-            <img src="img/1-removebg-preview.png" alt="">
+            <img src="{% static 'img/1-removebg-preview.png' %}" alt="">
             <h2>sport page</h2>
         </div>
         
         <div class="menu" id="menu-icon" >
-            <img src="img/bx-menu.png" alt="" id="menu-icon">
+            <img src="{% static 'img/bx-menu.png' %}" alt="" id="menu-icon">
         </div>
         
         <ul class="links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="livescore.html">Livescores</a></li>
-            <li><a href="news.html">Breaking News</a></li>
-            <li><a href="transfer.html">Tranfers</a></li>
-            <li><a href="About.html">About us</a></li>
+            
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'livescore' %}">Livescores</a></li>
+            <li><a href="{% url 'news' %}">Breaking News</a></li>
+            <li><a href="{% url 'transfer' %}">Tranfers</a></li>
+            <li><a href="{% url 'about' %}">About us</a></li>
 
         </ul>
 
@@ -36,15 +39,15 @@
        
     </header>
     <ul class="navbar" id="navbar">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="{% url 'index' %}">Home</a></li>
         <hr>
-        <li><a href="livescore.html">Livescores</a></li>
+        <li><a href="{% url 'livescore' %}">Livescores</a></li>
         <hr>
-        <li><a href="news.html">Breaking News</a></li>
+      
+        <li><a href="{% url 'news' %}">Breaking News</a></li>
         <hr>
-        <li><a href="transfer.html">Tranfers</a></li>
-        <hr>
-        <li><a href="About.html">About us</a></li>
+      
+        <li><a href="{% url 'transfer' %}">Tranfers</a></li>
         <hr>
 
 </ul>
@@ -72,7 +75,7 @@
 
 <p>Klopp has been key to bringing out the best from Nunez, with the Uruguayan forward emerging to be instrumental in Liverpool's recent attacking exploits. His clinical finishing was on display once again as he netted his second goal of the game just before halftime in a similar impressive fashion. With a tally of 16 goals and 11 assists this season, Nunez has emerged as a crucial component
      of Liverpool's attacking arsenal, particularly in the absence of star forward Mohamed Salah.</p>
- <img src="img/klop.webp" alt="" width="100%">
+ <img src="{% static 'img/klop.webp' %}" alt="" width="100%">
 
  <p>
     Klopp will have little time to celebrate this historic achievement, though, as attention now turns to their upcoming Premier League clash against Manchester City at Anfield on Sunday. With Klopp's side currently leading the title race by a 
@@ -97,7 +100,7 @@
     
 
 
-    <script src="index.js"></script>
+    <script src="{% static 'index.js' %}"></script>
 
 </body>
 </html>

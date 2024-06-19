@@ -1,3 +1,5 @@
+
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +8,7 @@
     <title>Sport page</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500;600;700;800;900&display=swap"
     rel="stylesheet">
-    <link rel="stylesheet" href="page.css">
+    <link rel="stylesheet" href="{% static 'page.css' %}">
    
 
 </head>
@@ -14,20 +16,20 @@
     <!--navbar-->
     <header>
         <div class="logo">
-            <img src="img/1-removebg-preview.png" alt="">
+            <img src="{% static 'img/1-removebg-preview.png' %}" alt="">
             <h2>sport page</h2>
         </div>
         
         <div class="menu" id="menu-icon" >
-            <img src="img/bx-menu.png" alt="" id="menu-icon">
+            <img src="{% static 'img/bx-menu.png' %}" alt="" id="menu-icon">
         </div>
         
         <ul class="links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="livescore.html">Livescores</a></li>
-            <li><a href="news.html">Breaking News</a></li>
-            <li><a href="transfer.html">Tranfers</a></li>
-            <li><a href="About.html">About us</a></li>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'livescore' %}">Livescores</a></li>
+            <li><a href="{% url 'news' %}">Breaking News</a></li>
+            <li><a href="{% url 'transfer' %}">Tranfers</a></li>
+            <li><a href="{% url 'about' %}">About us</a></li>
 
         </ul>
 
@@ -36,15 +38,15 @@
        
     </header>
     <ul class="navbar" id="navbar">
-        <li><a href="index.html">Home</a></li>
+    	<li><a href="{% url 'index' %}">Home</a></li>
         <hr>
-        <li><a href="livescore.html">Livescores</a></li>
+        <li><a href="{% url 'livescore' %}">Livescores</a></li>
         <hr>
-        <li><a href="news.html">Breaking News</a></li>
+      
+        <li><a href="{% url 'news' %}">Breaking News</a></li>
         <hr>
-        <li><a href="transfer.html">Tranfers</a></li>
-        <hr>
-        <li><a href="About.html">About us</a></li>
+      
+        <li><a href="{% url 'transfer' %}">Tranfers</a></li>
         <hr>
 
 </ul>
@@ -71,7 +73,7 @@
 
 <p>Several teams felt that last year. The LA Galaxy experienced it early on in this MLS season. This time around, Nashville SC found themselves
      on the end of a ridiculous Inter Miami comeback, one spearheaded by the two Barcelona icons.</p>
- <img src="img/messi.webp" alt="" width="100%">
+ <img src="{% static 'img/messi.webp' %}" alt="" width="100%">
 
  <p>
     For most of Thursday night's CONCACAF Champions Cup clash, it felt like Inter Miami were on the ropes. Nashville were up 2-0 moments into
@@ -98,7 +100,7 @@
     
 
 
-    <script src="index.js"></script>
+    <script src="{% static 'index.js' %}"></script>
 
 </body>
 </html>

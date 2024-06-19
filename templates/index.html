@@ -99,9 +99,9 @@
     <!--article 4-->
 
     <article>
-        <a href="home-article-4.html"><img src="{% static 'img/GOAL_-_Multiple_Images_-_3_Stacked_-_Facebook_(24).webp' %}" alt=""></a>
+        <a href="{% url 'home-article-4' %}"><img src="{% static 'img/GOAL_-_Multiple_Images_-_3_Stacked_-_Facebook_(24).webp' %}" alt=""></a>
         <div>
-            <a href="home-article-4.html">
+            <a href="{% url 'home-article-4' %}">
                 <h3>Graham Potter, Roberto De Zerbi and the candidates to succeed struggling Erik ten Hag as Man Utd manager - ranked</h3>
             </a>
         </div>
@@ -117,8 +117,8 @@
 <section class="a">
      <!--article 5-->
     <article class="root">
-        <a href="home-article-5.html"><img src="{% static 'img/messi.webp' %}" alt=""></a>
-        <a href="home-article-5.html">
+        <a href="{% url 'home-article-5' %}"><img src="{% static 'img/messi.webp' %}" alt=""></a>
+        <a href="{% url 'home-article-5' %}">
             <h3>Inter Miami player ratings vs Nashville SC:</h3>
         </a>
     </article>
@@ -130,8 +130,8 @@
     <div class="last">
             <!--article 6-->
         <div class="box">
-            <a href="home-article-6.html"><img src="{% static 'img/ronaldo.webp' %}" ></a>
-            <a href="home-article-6.html">
+            <a href="{% url 'home-article-6' %}"><img src="{% static 'img/ronaldo.webp' %}" ></a>
+            <a href="{% url 'home-article-6' %}">
                 <h3>
                     Wasteful Cristiano Ronaldo misses several chances
                 </h3>
@@ -141,9 +141,9 @@
             <!--article 7-->
 
         <div class="box">
-            <a href="home-article-7.html"><img src="{% static 'img/klop.webp' %}" alt=""></a>
-            <a href="home-article-7.html">
-                <h3>urgen Klopp’s entertainers! Darwin Nunez stunner brings up landmark 
+            <a href="{% url 'home-article-7' %}"><img src="{% static 'img/klop.webp' %}" alt=""></a>
+            <a href="{% url 'home-article-7' %}">
+                <h3>urgen {% url 'home-article-6' %}Klopp’s entertainers! Darwin Nunez stunner brings up landmark 
                 </h3>
             </a>
 
@@ -151,8 +151,8 @@
             <!--article 8-->
 
         <div class="box">
-            <a href="home-article-8.html"><img src="{% static 'img/halland.webp' %}" alt=""></a>
-            <a href="home-article-8.html">
+            <a href="{% url 'home-article-8' %}"><img src="{% static 'img/halland.webp' %}" alt=""></a>
+            <a href="{% url 'home-article-8' %}">
                 <h3>Where Premier League, Serie A, La Liga & Bundesliga rank in race.
                 </h3>
             </a>

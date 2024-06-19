@@ -23,3 +23,11 @@ def home_articlec(request):
     return render(request,'home-article-3.html')
 def home_articled(request):
     return render(request,'home-article-4.html')
+def home_articlee(request):
+    return render(request,'home-article-5.html')
+def home_articlef(request):
+    return render(request,'home-article-6.html')
+def home_articleg(request):
+    return render(request,'home-article-7.html')
+def home_articleh(request):
+    return render(request,'home-article-8.html')
