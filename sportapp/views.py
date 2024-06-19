@@ -43,3 +43,29 @@ def newse(request):
     return render(request,'News-article/news-article-5.html')
 def newsf(request):
     return render(request,'News-article/news-article-9.html')
+def tranfera(request):
+    return render(request, 'transfers-article/tranfer-article-1.html')
+
+def tranferb(request):
+    return render(request, 'transfers-article/tranfer-article-2.html')
+
+def tranferc(request):
+    return render(request, 'transfers-article/tranfer-article-3.html')
+
+def tranferd(request):
+    return render(request, 'transfers-article/tranfer-article-4.html')
+
+def tranfere(request):
+    return render(request, 'transfers-article/tranfer-article-5.html')
+
+def tranferf(request):
+    return render(request, 'transfers-article/tranfer-article-6.html')
+
+def tranferg(request):
+    return render(request, 'transfers-article/tranfer-article-7.html')
+
+def tranferh(request):
+    return render(request, 'transfers-article/tranfer-article-8.html')
+
+def tranferi(request):
+    return render(request, 'transfers-article/tranfer-article-9.html')

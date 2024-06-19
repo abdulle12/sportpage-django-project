@@ -1,0 +1,58 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'tranfers-article/pages.css' %}">
+</head>
+<body>
+<header>
+    <div class="logo">
+        <img src="{% static 'tranfers-article/img/1-removebg-preview.png' %}" alt="">
+        <h2>sport page</h2>
+    </div>
+    <div class="menu" id="menu-icon">
+        <img src="{% static 'tranfers-article/img/bx-menu.png' %}" alt="" id="menu-icon">
+    </div>
+    <ul class="links">
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="{% url 'livescore' %}">Livescores</a></li>
+        <li><a href="{% url 'news' %}">Breaking News</a></li>
+        <li><a href="{% url 'transfer' %}">Transfers</a></li>
+        <li><a href="{% url 'about' %}">About us</a></li>
+    </ul>
+</header>
+<ul class="navbar" id="navbar">
+    <li><a href="{% url 'index' %}">Home</a></li>
+    <hr>
+    <li><a href="{% url 'livescore' %}">Livescores</a></li>
+    <hr>
+    <li><a href="{% url 'news' %}">Breaking News</a></li>
+    <hr>
+    <li><a href="{% url 'transfer' %}">Transfers</a></li>
+    <hr>
+    <li><a href="{% url 'about' %}">About us</a></li>
+    <hr>
+</ul>
+<div class="header">
+    <h1>Transfers</h1>
+</div>
+<div class="main">
+    <h2>Explained: How Romelu Lukaku kept Liverpool from making Man City star Jeremy Doku their Sadio Mane replacement</h2>
+    <p>Jurgen Klopp & Co. pulled out all the stops to convince the Belgian to move to Anfield as a teenager but it was all in vain</p>
+    <p>Arsenal, Manchester City, Chelsea, Ajax and PSV - so many of Europe's top clubs wanted to sign Jeremy Doku from Anderlecht when he was still only 15 - but nobody rolled out the red carpet quite like Liverpool.</p>
+    <p>"Steven Gerrard showed us videos with tactical analysis," Doku's father David later revealed to Het Nieuwsblad. "At the training complex [Simon] Mignolet, [Sadio] Mane and [Georginio] Wijnaldum came to talk to us. How we were received there... damn!"</p>
+    <img src="{% static 'tranfers-article/img/tranfer-image-4.webp' %}" alt="" width="100%">
+    <p>Liverpool's intense interest in Doku was understandable. As a lightning-quick winger blessed with devastating dribbling skills, the Belgian was already deemed destined for greatness. Anderlecht were, thus, terrified by the prospect of losing one of their most exciting-ever academy products for a minimal fee before he had even made his first-team debut.</p>
+</div>
+<footer>
+    <p>Sport page &copy; 2024</p>
+</footer>
+<script src="{% static 'tranfers-article/index.js' %}"></script>
+</body>
+</html>

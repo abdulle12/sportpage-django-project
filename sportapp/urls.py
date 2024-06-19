@@ -22,6 +22,15 @@ urlpatterns = [
     path('news-article-4/',views.newsd,name='news-article-4'),
     path('news-article-5/',views.newse,name='news-article-5'),
     path('news-article-9/',views.newsf,name='news-article-9'),
+      path('tranfer-article-1/', views.tranfera, name='tranfer-article-1'),
+    path('tranfer-article-2/', views.tranferb, name='tranfer-article-2'),
+    path('tranfer-article-3/', views.tranferc, name='tranfer-article-3'),
+    path('tranfer-article-4/', views.tranferd, name='tranfer-article-4'),
+    path('tranfer-article-5/', views.tranfere, name='tranfer-article-5'),
+    path('tranfer-article-6/', views.tranferf, name='tranfer-article-6'),
+    path('tranfer-article-7/', views.tranferg, name='tranfer-article-7'),
+    path('tranfer-article-8/', views.tranferh, name='tranfer-article-8'),
+    path('tranfer-article-9/', views.tranferi, name='tranfer-article-9'),
     
     
 
