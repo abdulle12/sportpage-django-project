@@ -1,4 +1,6 @@
 {% load static %}
+{% static "img" as baseUrl %}
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -66,10 +68,10 @@
     <!--article 1-->
     <article class="featured">
         
-            <a href="{% url 'home-article-1' %}"><img src="{% static 'img/Victor_Osimhen_Napoli.webp' %}" alt=""></a>
+            <a href="{% url 'home-article-1'  %}"><img src="{% static 'img/Victor_Osimhen_Napoli.webp' %}" alt=""></a>
             <div class="showcase">
-                <a href="{% url 'home-article-1' %}">
-                    <h2>'Manchester United don't need Super Eagles' Osimhen! PSG is good move but Arsenal will be greatest' - Fans
+                <a href="{% url 'home-article-1'  %}">
+                    <h2> Chances of the Super Eagles striker, Osimhen, playing for Napoli
                     </h2>
                 </a>
                 
@@ -78,34 +80,17 @@
     </article>
     <!--article 2-->
 
-
+    {%for article in articles%}
     <article>
-        <a href="{% url 'home-article-2' %}"><img src="{% static 'img/Chelsea_Mourinho_Return.webp' %}" alt=""></a>
+        <a href="{% url article.url %}"><img src="{{baseUrl}}/{{article.img}}" alt=""></a>
         <div>
-            <a href="{% url 'home-article-2' %}">
-                <h3>Be careful what you wish for, Chelsea fans: Jose Mourinho's return would only lead to more carnaged</h3>
+            <a href="{% url  article.url %}">
+                <h3>{{article.head}}</h3>
             </a>
         </div>
     </article>
-    <!--article 3-->
-    <article>
-        <a href="{% url 'home-article-3' %}"><img src="{% static 'img/GOAL_-_Blank_WEB_-_Facebook_-_2024-03-06T225944.823.webp' %}" alt=""></a>
-        <div>
-            <a href="{% url 'home-article-3' %}">
-                <h3>inicius Jr & Jude Bellingham combine to haul sloppy Blancos into Champions League quarter-finals</h3>
-            </a>
-        </div>
-    </article>
-    <!--article 4-->
-
-    <article>
-        <a href="{% url 'home-article-4' %}"><img src="{% static 'img/GOAL_-_Multiple_Images_-_3_Stacked_-_Facebook_(24).webp' %}" alt=""></a>
-        <div>
-            <a href="{% url 'home-article-4' %}">
-                <h3>Graham Potter, Roberto De Zerbi and the candidates to succeed struggling Erik ten Hag as Man Utd manager - ranked</h3>
-            </a>
-        </div>
-    </article>
+    {%endfor%}
+    
 
    
   

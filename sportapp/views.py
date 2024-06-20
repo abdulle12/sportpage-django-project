@@ -1,8 +1,36 @@
 # sportapp/views.py
 from django.shortcuts import render
+from .models import Homepage
 
 def index(request):
-    return render(request, 'index.html')
+    article2=Homepage()
+    article2.head='Chances of the Super Eagles striker, Osimhen, playing for Napoli'
+    article2.img='image-1.jpg'
+    article2.url='home-article-2'
+    
+    article3=Homepage()
+    article3.head="Be careful what you wish for, Chelsea fans: Jose Mourinho's return would only lead to more carnaged"
+    article3.img='image-2.jpg'
+    article3.url='home-article-3'
+    
+    article4=Homepage()
+    article4.head="inicius Jr & Jude Bellingham combine to haul sloppy Blancos into Champions League quarter-finals"
+    article4.img='image-3.jpg'
+    article4.url='home-article-4'
+    
+   
+    
+    
+   
+    
+    
+    articles=[article2,article3,article4]
+    
+    return render(request, 'index.html',{'articles':articles})
+
+
+
+
 
 def news(request):
     return render(request, 'news.html')
@@ -14,6 +42,8 @@ def livescore(request):
     return render(request,'livescore.html')
 def about(request):
     return render(request,'about.html')
+
+
 
 def home_articlea(request):
     return render(request,'home-article-1.html')
