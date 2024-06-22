@@ -1,32 +1,32 @@
 # sportapp/views.py
 from django.shortcuts import render
 from .models import Homepage
+from .models import Homepage1
+from .models import Homepage2
+from .models import Homepage3
+
 
 def index(request):
-    article2=Homepage()
-    article2.head='Chances of the Super Eagles striker, Osimhen, playing for Napoli'
-    article2.img='image-1.jpg'
-    article2.url='home-article-2'
     
-    article3=Homepage()
-    article3.head="Be careful what you wish for, Chelsea fans: Jose Mourinho's return would only lead to more carnaged"
-    article3.img='image-2.jpg'
-    article3.url='home-article-3'
     
-    article4=Homepage()
-    article4.head="inicius Jr & Jude Bellingham combine to haul sloppy Blancos into Champions League quarter-finals"
-    article4.img='image-3.jpg'
-    article4.url='home-article-4'
+
+
     
    
+    articles=Homepage.objects.all()
+    showcasesa=Homepage2.objects.all()
+    showcases=Homepage1.objects.all()
+    articlesa=Homepage3.objects.all()
+    context = {
+        'articles': articles,
+        'showcases': showcases,
+        'showcasesa':showcasesa,
+        'articlesa': articlesa,
+
+    }
+
     
-    
-   
-    
-    
-    articles=[article2,article3,article4]
-    
-    return render(request, 'index.html',{'articles':articles})
+    return render(request, 'index.html', context)
 
 
 

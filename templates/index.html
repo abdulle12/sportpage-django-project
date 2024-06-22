@@ -1,6 +1,7 @@
+
+
 {% load static %}
 {% static "img" as baseUrl %}
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -63,86 +64,70 @@
 </div>
 
 
-<!---main section-->
-<main class="grid">
-    <!--article 1-->
-    <article class="featured">
-        
-            <a href="{% url 'home-article-1'  %}"><img src="{% static 'img/Victor_Osimhen_Napoli.webp' %}" alt=""></a>
-            <div class="showcase">
-                <a href="{% url 'home-article-1'  %}">
-                    <h2> Chances of the Super Eagles striker, Osimhen, playing for Napoli
-                    </h2>
-                </a>
-                
-            </div>
-        
-    </article>
-    <!--article 2-->
 
-    {%for article in articles%}
-    <article>
-        <a href="{% url article.url %}"><img src="{{baseUrl}}/{{article.img}}" alt=""></a>
-        <div>
-            <a href="{% url  article.url %}">
-                <h3>{{article.head}}</h3>
+<!-- main section -->
+<main class="grid">
+    <!-- first showcase articles -->
+    {% for showcase in showcases %}
+    <article class="featured">
+        <a href="{% url showcase.urls %}"><img src="{{ showcase.img.url }}" alt=""></a>
+        <div class="showcase">
+            <a href="{% url showcase.urls %}">
+                <h2>{{ showcase.head }}</h2>
             </a>
         </div>
     </article>
-    {%endfor%}
-    
+    {% endfor %}
 
-   
-  
-    
-
-
+    <!--first section articles -->
+    {% for article in articles %}
+    <article>
+        <a href="{% url article.urls %}"><img src="{{ article.img.url }}" alt=""></a>
+        <div>
+            <a href="{% url article.urls %}">
+                <h3>{{ article.head }}</h3>
+            </a>
+        </div>
+    </article>
+    {% endfor %}
 </main>
 
+{% for showcasea in showcasesa %}
 <section class="a">
-     <!--article 5-->
+     <!--Second showcase articles-->
     <article class="root">
-        <a href="{% url 'home-article-5' %}"><img src="{% static 'img/messi.webp' %}" alt=""></a>
-        <a href="{% url 'home-article-5' %}">
-            <h3>Inter Miami player ratings vs Nashville SC:</h3>
+        <a href="{% url showcasea.urls %}"><img src="{{ showcasea.img.url }}" alt=""></a>
+        <a href="{% url showcasea.urls %}">
+            <h3>{{showcasea.head}}</h3>
         </a>
     </article>
 </section>
-
+{% endfor %}
 
 <!--last section-->
 <div class="wrapper">
+    
     <div class="last">
-            <!--article 6-->
+
+            <!--last section articles-->
+            {% for articlea in articlesa %}
         <div class="box">
-            <a href="{% url 'home-article-6' %}"><img src="{% static 'img/ronaldo.webp' %}" ></a>
-            <a href="{% url 'home-article-6' %}">
+            <a href="{% url articlea.urls %}"><img src="{{ articlea.img.url }}" ></a>
+            <a href="{% url articlea.urls %}">
                 <h3>
                     Wasteful Cristiano Ronaldo misses several chances
                 </h3>
             </a>
+            
 
         </div>
-            <!--article 7-->
+        {% endfor %}
+        
+            
+        
+           
 
-        <div class="box">
-            <a href="{% url 'home-article-7' %}"><img src="{% static 'img/klop.webp' %}" alt=""></a>
-            <a href="{% url 'home-article-7' %}">
-                <h3>urgen {% url 'home-article-6' %}Klopp’s entertainers! Darwin Nunez stunner brings up landmark 
-                </h3>
-            </a>
-
-        </div>
-            <!--article 8-->
-
-        <div class="box">
-            <a href="{% url 'home-article-8' %}"><img src="{% static 'img/halland.webp' %}" alt=""></a>
-            <a href="{% url 'home-article-8' %}">
-                <h3>Where Premier League, Serie A, La Liga & Bundesliga rank in race.
-                </h3>
-            </a>
-
-        </div>
+        
            
     </div>
 </div>   
