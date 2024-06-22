@@ -51,90 +51,58 @@
     <!--main section-->
     <main class="grid">
         <!--article 1-->
+        {% for article in articles %}
         <article class="featured">
-            <a href="{% url 'news-article-1' %}"><img src="{% static 'img/squiz.webp' %}" alt=""></a>
+            <a href="{% url article.urls %}"><img src="{{ article.img.url }}" alt=""></a>
             <div class="showcase">
-                <a href="{% url 'news-article-1' %}">
-                    <h2>Luis Suarez saves the day! Ex-Barcelona star nets last-gasp equalizer in Inter Miami's</h2>
+                <a href="{% url article.urls %}">
+                    <h2>{{ article.head }}</h2>
                 </a>
             </div>
         </article>
+        {% endfor %}
 
         <!--article 2-->
+        {% for articlea in articlesa %}
         <article>
-            <a href="{% url 'news-article-2' %}"><img src="{% static 'News-article/img/news-image-1.webp' %}" alt=""></a>
+            <a href="{% url articlea.urls %}"><img src="{{ articlea.img.url }}" alt=""></a>
             <div>
-                <a href="{% url 'news-article-2' %}">
-                    <h3>Brandon Vazquez scores the winner against former club FC Cincinnati!</h3>
+                <a href="{% url articlea.urls %}">
+                    <h3>{{ articlea.head }}</h3>
                 </a>
             </div>
         </article>
+        {% endfor %}
 
-        <!--article 3-->
-        <article>
-            <a href="{% url 'news-article-3' %}"><img src="{% static 'News-article/img/news-image-3.webp' %}" alt=""></a>
-            <div>
-                <a href="{% url 'news-article-3' %}">
-                    <h3>Dazzling Darwin Nunez the star as ruthless Reds put one foot in Europa League quarter</h3>
-                </a>
-            </div>
-        </article>
-
-        <!--article 4-->
-        <article>
-            <a href="{% url 'news-article-4' %}"><img src="{% static 'News-article/img/news-image-4.webp' %}" alt=""></a>
-            <div>
-                <a href="{% url 'news-article-4' %}">
-                    <h3>Christian Pulisic the menace! USMNT star nets late dagger and draws crucial red card</h3>
-                </a>
-            </div>
-        </article>
+    
     </main>
 
     <section class="a">
         <!--article 5-->
+        {% for articleb in articlesb %}
         <article class="root">
-            <a href="{% url 'home-article-5' %}"><img src="{% static 'img/messi.webp' %}" alt=""></a>
-            <a href="{% url 'home-article-5' %}">
-                <h3>Inter Miami player ratings vs Nashville SC:</h3>
+            <a href="{% url articleb.urls %}"><img src="{{ articleb.img.url }}" alt=""></a>
+            <a href="{% url articleb.urls %}">
+                <h3>{{ articleb.head }}</h3>
             </a>
         </article>
+        {% endfor %}
     </section>
 
     <!--last section-->
     <div class="wrapper">
         <div class="last">
             <!--article 6-->
+            {% for content in last %}
             <div class="box">
-                <a href="{% url 'home-article-6' %}"><img src="{% static 'img/ronaldo.webp' %}" alt=""></a>
-                <a href="{% url 'home-article-6' %}">
-                    <h3>Wasteful Cristiano Ronaldo misses several chances</h3>
+                <a href="{% url content.urls %}"><img src="{{ content.img.url }}" alt=""></a>
+                <a href="{% url content.urls %}">
+                    <h3>{{ content.head }}</h3>
                 </a>
             </div>
+            {% endfor %}
 
-            <!--article 7-->
-            <div class="box">
-                <a href="{% url 'home-article-7' %}"><img src="{% static 'img/klop.webp' %}" alt=""></a>
-                <a href="{% url 'home-article-7' %}">
-                    <h3>Jurgen Klopp’s entertainers! Darwin Nunez stunner brings up landmark</h3>
-                </a>
-            </div>
-
-            <!--article 8-->
-            <div class="box">
-                <a href="{% url 'home-article-8' %}"><img src="{% static 'img/halland.webp' %}" alt=""></a>
-                <a href="{% url 'home-article-8' %}">
-                    <h3>Where Premier League, Serie A, La Liga & Bundesliga rank in race.</h3>
-                </a>
-            </div>
-
-            <!--article 9-->
-            <div class="box">
-                <a href="{% url 'news-article-9' %}"><img src="{% static 'News-article/img/news-image-9.webp' %}" alt=""></a>
-                <a href="{% url 'news-article-9' %}">
-                    <h3>Chelsea get their revenge on Man City!</h3>
-                </a>
-            </div>
+          
         </div>
     </div>
 

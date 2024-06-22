@@ -4,6 +4,10 @@ from .models import Homepage
 from .models import Homepage1
 from .models import Homepage2
 from .models import Homepage3
+from .models import Newspage1
+from .models import Newspage2
+from .models import Newspage3
+from .models import Newspage4
 
 
 def index(request):
@@ -16,6 +20,7 @@ def index(request):
     articles=Homepage.objects.all()
     showcasesa=Homepage2.objects.all()
     showcases=Homepage1.objects.all()
+    articlesa=Homepage3.objects.all()
     articlesa=Homepage3.objects.all()
     context = {
         'articles': articles,
@@ -31,9 +36,25 @@ def index(request):
 
 
 
-
+#news page views
 def news(request):
-    return render(request, 'news.html')
+    articles=Newspage1.objects.all()
+    articlesa=Newspage2.objects.all()
+    articlesb=Newspage3.objects.all()
+    last=Newspage4.objects.all()
+
+    context = {
+        'articles': articles,
+        'articlesa': articlesa,
+        'articlesb': articlesb,
+        'last': last,
+        
+
+    }
+    
+    return render(request, 'news.html',context)
+
+
 
 def transfer(request):
     return render(request,'transfer.html')
