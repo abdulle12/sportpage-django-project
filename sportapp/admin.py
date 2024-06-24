@@ -9,6 +9,12 @@ from .models import Newspage1
 from .models import Newspage2
 from .models import Newspage3
 from .models import Newspage4
+from .models import Transfepage1
+from .models import Transfepage2
+from .models import Transfepage3
+from .models import Transfepage4
+from .models import livescore
+
 
 #homepage models
 admin.site.register(Homepage)
@@ -21,5 +27,12 @@ admin.site.register(Newspage1)
 admin.site.register(Newspage2)
 admin.site.register(Newspage3)
 admin.site.register(Newspage4)
+#tranferpage models
+admin.site.register(Transfepage1)
+admin.site.register(Transfepage2)
+admin.site.register(Transfepage3)
+admin.site.register(Transfepage4)
+#livescore models
+admin.site.register(livescore)
 
 

@@ -8,6 +8,11 @@ from .models import Newspage1
 from .models import Newspage2
 from .models import Newspage3
 from .models import Newspage4
+from .models import Transfepage1
+from .models import Transfepage2
+from .models import Transfepage3
+from .models import Transfepage4
+
 
 
 def index(request):
@@ -57,7 +62,22 @@ def news(request):
 
 
 def transfer(request):
-    return render(request,'transfer.html')
+    articles=Transfepage1.objects.all()
+    articlesa=Transfepage2.objects.all()
+    articlesb=Transfepage3.objects.all()
+    articlesc=Transfepage4.objects.all()
+
+    
+    context = {
+        'articles': articles,
+        'articlesa': articlesa,
+        'articlesb': articlesb,
+        'articlesc': articlesc,
+        
+
+    }
+
+    return render(request,'transfer.html',context)
 
 def livescore(request):
     return render(request,'livescore.html')

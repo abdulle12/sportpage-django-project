@@ -51,7 +51,30 @@ class Newspage3(models.Model):
 class Newspage4(models.Model):
     head=models.CharField(max_length=100)
     img=models.ImageField(upload_to='pic')
-    urls=models.CharField(max_length=100)      
+    urls=models.CharField(max_length=100)
+  #transferpage model  
+class Transfepage1(models.Model):
+    head=models.CharField(max_length=100)
+    img=models.ImageField(upload_to='pic')
+    urls=models.CharField(max_length=100) 
+class Transfepage2(models.Model):
+    head=models.CharField(max_length=100)
+    img=models.ImageField(upload_to='pic')
+    urls=models.CharField(max_length=100)
+class Transfepage3(models.Model):
+    head=models.CharField(max_length=100)
+    img=models.ImageField(upload_to='pic')
+    urls=models.CharField(max_length=100)  
+class Transfepage4(models.Model):
+    head=models.CharField(max_length=100)
+    img=models.ImageField(upload_to='pic')
+    urls=models.CharField(max_length=100)
+class livescore(models.Model):
+    img=models.ImageField(upload_to='pic')
+    head=models.CharField(max_length=100)
+    time = models.TimeField()   
+    match= models.CharField(max_length=100)            
+
 
 
 

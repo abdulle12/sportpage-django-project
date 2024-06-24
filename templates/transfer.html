@@ -49,84 +49,58 @@
     <!---main section-->
     <main class="grid">
         <!--article 1-->
+        {% for article in articles %}
         <article class="featured">
-            <a href="{% url 'tranfer-article-1' %}"><img src="{% static 'tranfers-article/img/tranfer-image-1.webp' %}" alt=""></a>
+            <a href="{% url article.urls %}"><img src="{{ article.img.url }}" alt=""></a>
             <div class="showcase">
-                <a href="{% url 'tranfer-article-1' %}">
-                    <h2>Liverpool & Man City tracking Pedro Neto on £60 million</h2>
+                <a href="{% url article.urls %}">
+                    <h2>{{ article.head }}</h2>
                 </a>
             </div>
         </article>
+        {% endfor %}
         <!--article 2-->
+        {% for articlea in articlesa %}
         <article>
-            <a href="{% url 'tranfer-article-2' %}"><img src="{% static 'tranfers-article/img/tranfer-image-2.webp' %}" alt=""></a>
+            <a href="{% url articlea.urls %}"><img src="{{ articlea.img.url }}" alt=""></a>
             <div>
-                <a href="{% url 'tranfer-article-2' %}">
-                    <h3>Paris Saint-Germain boss Luis Enrique seemed to confirm Kylian Mbappe's imminent departure</h3>
+                <a href="{% url articlea.urls %}">
+                    <h3>{{ articlea.head }}</h3>
                 </a>
             </div>
         </article>
-        <!--article 3-->
-        <article>
-            <a href="{% url 'tranfer-article-3' %}"><img src="{% static 'tranfers-article/img/tranfer-image-3.webp' %}" alt=""></a>
-            <div>
-                <a href="{% url 'tranfer-article-3' %}">
-                    <h3>Mohamed Salah admits he will leave Liverpool one day</h3>
-                </a>
-            </div>
-        </article>
-        <!--article 4-->
-        <article>
-            <a href="{% url 'tranfer-article-4' %}"><img src="{% static 'tranfers-article/img/tranfer-image-4.webp' %}" alt=""></a>
-            <div>
-                <a href="{% url 'tranfer-article-4' %}">
-                    <h3>Lukaku kept Liverpool from making Man City star Jeremy Doku</h3>
-                </a>
-            </div>
-        </article>
+        {% endfor %}
+        
+        
     </main>
 
     <section class="a">
         <!--article 5-->
+        {% for articleb in articlesb %}
         <article class="root">
-            <a href="{% url 'tranfer-article-5' %}"><img src="{% static 'tranfers-article/img/tranfer-image-5.webp' %}" alt=""></a>
-            <a href="{% url 'tranfer-article-5' %}">
-                <h3>Paris Saint-Germain are plotting an ambitious €200m offer for Barcelona youngster Lamine Yamal</h3>
+            <a href="{% url articleb.urls %}"><img src="{{ articleb.img.url }}" alt=""></a>
+            <a href="{% url articleb.urls %}">
+                <h3>{{ articleb.head }}</h3>
             </a>
         </article>
+        {% endfor %}
     </section>
 
     <!--last section-->
     <div class="wrapper">
         <div class="last">
             <!--article 6-->
+            {% for articlec in articlesc %}
             <div class="box">
-                <a href="{% url 'tranfer-article-6' %}"><img src="{% static 'tranfers-article/img/tranfer-image-8.webp' %}" alt=""></a>
-                <a href="{% url 'tranfer-article-6' %}">
-                    <h3>Erling Haaland will reportedly demand a release clause</h3>
+                <a href="{% url articlec.urls %}"><img src="{{ articlec.img.url }}" alt=""></a>
+                <a href="{% url articlec.urls %}">
+                    <h3>{{ articlec.head }}</h3>
                 </a>
             </div>
-            <!--article 7-->
-            <div class="box">
-                <a href="{% url 'tranfer-article-7' %}"><img src="{% static 'tranfers-article/img/transfer-image-7.webp' %}" alt=""></a>
-                <a href="{% url 'tranfer-article-7' %}">
-                    <h3>American defender Sergino Dest, who has played a crucial role for PSV this season</h3>
-                </a>
-            </div>
-            <!--article 8-->
-            <div class="box">
-                <a href="{% url 'tranfer-article-8' %}"><img src="{% static 'tranfers-article/img/tranfer-image-9.webp' %}" alt=""></a>
-                <a href="{% url 'tranfer-article-8' %}">
-                    <h3>Why Man City are relieved Kylian Mbappe is leaving PSG for Real Madrid</h3>
-                </a>
-            </div>
-            <!--article 9-->
-            <div class="box">
-                <a href="{% url 'tranfer-article-9' %}"><img src="{% static 'tranfers-article/img/tranfer-image-10.webp' %}" alt=""></a>
-                <a href="{% url 'tranfer-article-9' %}">
-                    <h3>Harry Kane backed for Premier League return from Bayern Munich</h3>
-                </a>
-            </div>
+            {% endfor %}
+            
+            
+            
         </div>
     </div>   
 

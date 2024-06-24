@@ -93,6 +93,9 @@ h2 {
     
     
 }
+.links a:hover{
+    color: black;
+}
 .navbar a {
     color:rgba(0, 0, 0, 0.555);
     font-size: 18px;
