@@ -69,15 +69,47 @@ class Transfepage4(models.Model):
     head=models.CharField(max_length=100)
     img=models.ImageField(upload_to='pic')
     urls=models.CharField(max_length=100)
-class livescore(models.Model):
+class Livescore(models.Model):
     img=models.ImageField(upload_to='pic')
     head=models.CharField(max_length=100)
-    time = models.TimeField()   
-    match= models.CharField(max_length=100)            
+    time = models.TimeField()  
+    match= models.CharField(max_length=100)
+class League(models.Model):
+    name = models.CharField(max_length=100)
+    logo = models.ImageField(upload_to='pic')
+
+    def __str__(self):
+        return self.name  
+
+class Match(models.Model):
+    league = models.ForeignKey(League, related_name='matches', on_delete=models.CASCADE)
+    time = models.TimeField()
+    team1 = models.CharField(max_length=100)
+    team2 = models.CharField(max_length=100)
+
+    def __str__(self):
+        return f"{self.team1} vs {self.team2} at {self.time}"
 
 
+class Article1(models.Model):
+    head= models.CharField(max_length=100)
+    p1= models.CharField(max_length=1000)
+    p2= models.CharField(max_length=1000)
+    img= models.ImageField(upload_to='pic')
+    
 
 
+    
 
+
+class lastp(models.Model):
+    Article1 = models.ForeignKey(Article1, related_name='lastps', on_delete=models.CASCADE)
+    paragh = models.CharField(max_length=1000)
+    
+    
+    
+
+    def __str__(self):
+        return f"{self.paragh}"
 
    

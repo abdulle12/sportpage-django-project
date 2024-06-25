@@ -12,6 +12,9 @@ from .models import Transfepage1
 from .models import Transfepage2
 from .models import Transfepage3
 from .models import Transfepage4
+from .models import League
+from datetime import datetime
+from .models import Article1
 
 
 
@@ -80,14 +83,25 @@ def transfer(request):
     return render(request,'transfer.html',context)
 
 def livescore(request):
-    return render(request,'livescore.html')
+    current_date = datetime.now().strftime("%d %B")
+    leagues = League.objects.prefetch_related('matches').all()
+    context={
+        'current_date': current_date,
+        'leagues': leagues
+        
+    }
+    return render(request, 'livescore.html', context)
 def about(request):
     return render(request,'about.html')
 
 
 
 def home_articlea(request):
-    return render(request,'home-article-1.html')
+    articles = Article1.objects.prefetch_related('lastps').all()
+    context = {
+        'articles': articles,
+    }
+    return render(request, 'home-article-1.html', context)
 def home_articleb(request):
     return render(request,'home-article-2.html')
 def home_articlec(request):

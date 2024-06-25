@@ -13,7 +13,9 @@ from .models import Transfepage1
 from .models import Transfepage2
 from .models import Transfepage3
 from .models import Transfepage4
-from .models import livescore
+from .models import Livescore
+from .models import League, Match
+from .models import Article1,lastp
 
 
 #homepage models
@@ -33,6 +35,10 @@ admin.site.register(Transfepage2)
 admin.site.register(Transfepage3)
 admin.site.register(Transfepage4)
 #livescore models
-admin.site.register(livescore)
-
+admin.site.register(Livescore)
+admin.site.register(League)
+admin.site.register(Match)
+#Article models
+admin.site.register(Article1)
+admin.site.register(lastp)
 

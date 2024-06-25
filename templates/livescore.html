@@ -57,86 +57,37 @@
 </ul>
 <!--page header-->
 
-<div class="header">
-    <h1>Live Football Scores, Fixtures & Results</h1>
-</div>
-
 <main>
     <div class="header-2">
-        <h2>Today <br> 26 Feb</h2>
+        <h2>Today <br>{{ current_date }}</h2>
     </div>
-    
-<div class="premiere">
-    
+    {% for league in leagues %}
+    <div class="premiere">
         <div class="head">
-            <img src="{% static 'img/p-logo-removebg-preview.png' %}" alt="" width="150px">
-            <h3>England-Premier league</h3>
+            <img src="{{ league.logo.url }}" alt="" width="150px">
+            <h3>{{ league.name }}</h3>
         </div>
+
+        {% for match in league.matches.all %}
         <div class="bottom">
-            <p>20:30</p>
-            <p>West Ham United - Brenford</p>
+            <p>{{ match.time }}</p>
+            <p>{{ match.team1 }} - {{ match.team2 }}</p>
         </div>
-</div>
+        {% endfor %}
+    </div>
+    {% endfor %}
 
 
-<div class="laliga">
-    
-    <div class="head">
-        <img src="{% static 'img/laliga.png' %}" alt="" width="150px">
-        <h3>Spain-Laliga</h3>
-    </div>
-    <div class="bottom">
-        <p>23:00</p>
-        <p>Girona - Rayo</p>
-    </div>
-</div>
-
-<div class="seria a">
-    
-    <div class="head">
-        <img src="{% static 'img/serie a.jpg' %}" alt="" width="150px">
-        <h3>Italy-Serie A</h3>
-    </div>
-    <div class="bottom">
-        <p>20:30</p>
-        <p>Roma- Torino</p>
-    </div>
-    <div class="bottom">
-        <p>22:45</p>
-        <p>Florentina- Lazio</p>
-    </div>
 
 
-    <div class="FA ">
-    
-        <div class="head">
-            <img src="{% static 'img/fa.png' %}" alt="" width="150px">
-            <h3>England-FA cup</h3>
-        </div>
-        <div class="bottom">
-            <p>22:45</p>
-            <p>Coventry city - Maidstone United</p>
-        </div>
+
+
+   
         
 
 
-        <div class="seria a">
     
-            <div class="head">
-                <img src="{% static 'img/serie a.jpg' %}" alt="" width="150px">
-                <h3>Italy-Serie A</h3>
-            </div>
-            <div class="bottom">
-                <p>20:30</p>
-                <p>Roma- Torino</p>
-            </div>
-            <div class="bottom">
-                <p>22:45</p>
-                <p>Florentina- Lazio</p>
-            </div>
-</div>
 
-   
 </main>
 
 

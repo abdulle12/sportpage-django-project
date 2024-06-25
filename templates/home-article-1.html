@@ -61,25 +61,18 @@
 </div>
 
 <div class="main">
-   
-       <h2>'Manchester United don't need Super Eagles' Osimhen! PSG is good move but Arsenal will be greatest' - Fans.
-       </h2>
-   
-   <p>
-    Majority of GOAL readers have urged Nigeria's Victor Osimhen not to consider Manchester United when he leaves Napoli but join either Arsenal or PSG.
-   </p>
+    {% for article in articles %}
+        <h2>{{ article.head }}</h2>
+        <p>{{ article.p1 }}</p>
+        <p>{{ article.p2 }}</p>
+        <img src="{{ article.img.url }}" alt="" width="100%">
 
-    <p>
-        Chances of the Super Eagles striker, Osimhen, playing for Napoli in Serie A beyond this season are almost nil.
-    </p>
-
-<p>Most fans around the continent believe joining the Red Devils will not be a good move for the striker while some insist PSG is the best option if he wants to win trophies.</p>
- <img src="{% static 'img/Victor_Osimhen_Napoli.webp' %}" alt="" width="100%">
-
-
-
-
+        {% for p in article.lastps.all %}
+            <p>{{ p.paragh }}</p>
+        {% endfor %}
+    {% endfor %}
 </div>
+
 
 
 
