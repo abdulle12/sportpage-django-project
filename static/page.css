@@ -122,16 +122,16 @@ h2 {
   }
   .header {
     max-width: 1200px;
-    margin-top: 29px;
-    margin-bottom: 10px;
+    margin: 80px auto;
     margin-left: auto;
     margin-right: auto;
+    margin-top:66px ;
+    margin-bottom: 20px;
+    
     border-bottom: 1px solid gray;
     padding-bottom: 40px;
     text-align: center;
-    margin-bottom: 5px;
   }
-
 /* responsive */
 
 
