@@ -58,6 +58,15 @@ main {
     line-height: 40px;
     font-size: 24px;
  }
+
+ .time {
+    line-height: 40px;
+    font-size: 15px;
+ }
+ .team {
+    line-height: 40px;
+    font-size: 20px;
+ }
  .social {
     
         width: 220px;

@@ -70,8 +70,8 @@
 
         {% for match in league.matches.all %}
         <div class="bottom">
-            <p>{{ match.time }}</p>
-            <p>{{ match.team1 }} - {{ match.team2 }}</p>
+            <p class="time">{{ match.time }}</p>
+            <p class="team">{{ match.team1 }} - {{ match.team2 }}</p>
         </div>
         {% endfor %}
     </div>
