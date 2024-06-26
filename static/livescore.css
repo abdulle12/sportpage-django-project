@@ -54,16 +54,16 @@ main {
     font-size: 30px;
     
  }
- main p {
+ /* main p {
     line-height: 40px;
     font-size: 24px;
- }
+ } */
 
- .time {
+ main .time {
     line-height: 40px;
     font-size: 15px;
  }
- .team {
+ main .team {
     line-height: 40px;
     font-size: 20px;
  }
