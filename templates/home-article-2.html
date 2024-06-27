@@ -61,35 +61,16 @@
 </div>
 
 <div class="main">
-   
-       <h2>Be careful what you wish for, Chelsea fans: Jose Mourinho's return would only lead to more carnage
-       </h2>
-   
-   <p>
-    Some sections of the Blues' support have chanted for 'The Special One's' return, but he's more likely to bring chaos than success
-   </p>
-   <p>
-       Chelsea's manager cut a lonely figure at the Gtech Community Stadium on Saturday as chants of "f*ck off Mauricio" rained down from the away end. The Blues' travelling faithful - who have never warmed to the former Tottenham favourite - made it
-        abundantly clear who they want to replace the beleaguered Pochettino, following their obscenities with a chorus of "Jose Mourinho"
-   </p>
+    {% for articleb in articlesb %}
+        <h2>{{ articleb.head }}</h2>
+        <p>{{ articleb.p1 }}</p>
+        <p>{{ article.bp2 }}</p>
+        <img src="{{ articleb.img.url }}" alt="" width="100%">
 
- 
- <img src="{% static 'img/Chelsea_Mourinho_Return.webp' %}" alt="" width="100%">
-
- <p>
-    "It was difficult for me to understand but it’s normal," Pochettino said afterwards, having seen his team salvage a 2-2 draw. "We were losing 2-1 and it’s about expressing their frustration.
-     I am responsible as the head coach. I’m not worried. We need to accept this relationship."
-  
- </p>
-
-<p>
-    The Argentine tactician might not be worried, but in their short time at the helm, Chelsea's owners have shown an alarming willingness to bow to fan pressure, with Graham Potter axed once the supporters began to turn on him less than
-     a year ago, despite being backed to oversee a long-term project on numerous occasions by his bosses.
-    
-</p>
-
-
-
+        {% for p in articleb.lastps.all %}
+            <p>{{ p.paragh }}</p>
+        {% endfor %}
+    {% endfor %}
 </div>
 
 

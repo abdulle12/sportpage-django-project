@@ -15,8 +15,7 @@ from .models import Transfepage3
 from .models import Transfepage4
 from .models import Livescore
 from .models import League, Match
-from .models import Article1,lastp
-
+from .models import Article1,lastp,Article2
 
 #homepage models
 admin.site.register(Homepage)
@@ -40,5 +39,6 @@ admin.site.register(League)
 admin.site.register(Match)
 #Article models
 admin.site.register(Article1)
+admin.site.register(Article2)
 admin.site.register(lastp)
 
