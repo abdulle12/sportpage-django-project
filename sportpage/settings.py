@@ -81,7 +81,7 @@ DATABASES = {
         'NAME': 'sportpage',
         'USER':'postgres',
         'PASSWORD':'123456',
-        'HOST':'localhost'
+        'PORT': '5432',
 
     }
 }

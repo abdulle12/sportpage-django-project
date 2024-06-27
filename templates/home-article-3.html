@@ -54,51 +54,25 @@
 
 </ul>
 <!--page header-->
-
+                   
 <div class="header">
     <h1>Top story</h1>
 </div>
-
 <div class="main">
-   
-       <h2>Real Madrid player ratings vs RB Leipzig: Vinicius Jr & Jude Bellingham combine
-         to haul sloppy Blancos into Champions League quarter-finals
-       </h2>
-   
-   <p>
-    Carlo Ancelotti's dynamic duo made the difference to redeem a poor European showing at the Bernabeu, as Madrid progressed despite a 1-1 draw
-       
-   </p>
+    {% for articlec in articlesc %}
+    <h2>{{ articlec.head }}</h2>
+    <p>{{ articlec.p1 }}</p>
+    <p>{{ articlec.p2 }}</p>
 
 
-    <p>
-        When everything else failed, Real Madrid leaned on their star men; Jude Bellingham and Vinicius Jr worked in tandem to bag a crucial goal
-         and send an otherwise poor Madrid side to the Champions League last eight with a 2-1 aggregate win over RB Leipzig on Wednesday night.
-        
-    </p>
+    <img src="{{ articlec.img.url }}" alt="" width="100%">
 
-<p>
-    Lois Openda missed two chances inside 20 minutes, twice running in behind Los Blancos' high line before skewing his efforts. He lashed a third wide shortly before the break.
-
-</p>
- <img src="{% static 'img/GOAL_-_Blank_WEB_-_Facebook_-_2024-03-06T225944.823.webp' %}" alt="" width="100%">
-
- <p>
-    Real, for their part, created little in the opening 45 minutes. Manager Carlo Ancelotti deployed five midfielders, and Madrid looked predictably laboured as a result. Ancelotti introduced Rodygo at the break, and a
-     moment of magic changed things. Bellingham strode into the final third and fed Vinicius, who clipped his finish back across a sprawling goalkeeper.
- </p>
-
- 
-<p>
-    Leipzig responded quickly, with Willi Orban finding the bottom corner with a neat header to equalise on the night. The visitors had further chances, as Openda went close once again, and Xavi Simons saw an effort well 
- denied by Antonio Rudiger. Still, they couldn't find the net, and Madrid scraped through.
-</p>
-
-
+    {% for p in articlec.lastps.all %}
+        <p>{{ p.paragh }}</p>
+    {% endfor %}
+    {% endfor %}
 
 </div>
-
-
 
 
 <!--footer-->

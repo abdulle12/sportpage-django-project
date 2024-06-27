@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 #Showcase 
 class Homepage(models.Model):
@@ -91,42 +92,10 @@ class Match(models.Model):
         return f"{self.team1} vs {self.team2} at {self.time}"
 
 
-class Article1(models.Model):
-    head= models.CharField(max_length=100)
-    p1= models.CharField(max_length=1000)
-    p2= models.CharField(max_length=1000)
-    img= models.ImageField(upload_to='pic')
-
-class Article2(models.Model):
-    head= models.CharField(max_length=100)
-    p1= models.CharField(max_length=1000)
-    p2= models.CharField(max_length=1000)
-    img= models.ImageField(upload_to='pic')
-    
-
-
-    
-
-
-class lastp(models.Model):
-    
-    
-    Article1= models.ForeignKey(Article1, related_name='lastps', on_delete=models.CASCADE)
-    Article2= models.ForeignKey(Article2, related_name='lastps', on_delete=models.CASCADE)
-    paragh = models.CharField(max_length=1000)
     
     
     
 
-    def __str__(self):
-        return f"{self.paragh}"
-
-
-    
-    
-    
-
-    def __str__(self):
-        return f"{self.paragh}"   
+     
 
    

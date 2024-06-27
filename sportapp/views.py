@@ -14,7 +14,9 @@ from .models import Transfepage3
 from .models import Transfepage4
 from .models import League
 from datetime import datetime
-from .models import Article1,Article2
+
+
+
 
 
 
@@ -97,18 +99,15 @@ def about(request):
 
 
 def home_articlea(request):
-    articles = Article1.objects.prefetch_related('lastps').all()
-    context = {
-        'articles': articles,
-    }
-    return render(request, 'home-article-1.html', context)
+
+
+    return render(request, 'home-article-1.html')
 def home_articleb(request):
-    articlesb = Article2.objects.prefetch_related('lastps').all()
-    context = {
-        'articlesb': articlesb,
-    }
-    return render(request,'home-article-2.html',context)
+ 
+ 
+    return render(request,'home-article-2.html')
 def home_articlec(request):
+  
     return render(request,'home-article-3.html')
 def home_articled(request):
     return render(request,'home-article-4.html')
