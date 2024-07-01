@@ -47,14 +47,16 @@
         <h1>Transfers</h1>
     </div>
     <div class="main">
-        <h2>Explained: Why Man City are relieved Kylian Mbappe is leaving PSG for Real Madrid</h2>
-        <p>Manchester City are reportedly relieved that Kylian Mbappe appears to be heading to Real Madrid from Paris Saint-Germain this summer.</p>
-        <p>Mbappe is seemingly set to move to Real this summer, with the saga over his future finally poised to come to an end. His divorce with PSG has turned somewhat sour, with manager Luis Enrique dropping the World Cup winner to the bench. But that outcome 
-        is thought to have left City delighted, even if it means they will not be welcoming Mbappe to Manchester.</p>
-        <p>Per French journalist Julien Laurens, City are pleased that Mbappe is heading to the Santiago Bernabeu because it means they will be unable to afford a deal to sign the Blues' star man, Erling Haaland. The Norway international has long been mooted as a future 
-        Galactico, and he refused to shut the door on any move when asked earlier this week, but a summer deal now appears impossible.</p>
-        <img src="{% static 'tranfers-article/img/tranfer-image-9.webp' %}" alt="" width="100%">
-        <p>Mbappe scored twice for PSG on Tuesday as they overcame Real Sociedad, netting both goals in a 2-1 win that sealed a 4-1 aggregate triumph. They will subsequently look forward to the quarter-final draw.</p>
+        {% for article in transfer_articles %}
+        <h2>{{ article.head }}</h2>
+        <p>{{ article.p1 }}</p>
+        <p>{{ article.p2 }}</p>
+        <img src="{{ article.img.url }}" alt="" width="100%">
+    
+        {% for paragraph in article.paragraphs.all %}
+            <p>{{ paragraph.text }}</p>
+        {% endfor %}
+    {% endfor %}
     </div>
     <!--footer-->
     <footer>

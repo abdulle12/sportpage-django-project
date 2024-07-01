@@ -23,6 +23,7 @@ from .models import News_article_4, Paragraph1d,News_article_5, Paragraph1e,News
 from .models import News_article_7, Paragraph1g,News_article_8, Paragraph1h,News_article_9, Paragraph1i
 from .models import Transfer_article_1, Paragraph11,Transfer_article_2, Paragraph12,Transfer_article_3,Paragraph13
 from .models import Transfer_article_4, Paragraph14,Transfer_article_5, Paragraph15,Transfer_article_6, Paragraph16
+from .models import Transfer_article_7, Paragraph17,Transfer_article_8, Paragraph18,Transfer_article_9, Paragraph19
 
 
 #homepage models
@@ -45,7 +46,7 @@ admin.site.register(Transfepage4)
 admin.site.register(Livescore)
 admin.site.register(League)
 admin.site.register(Match)
-#Article models
+# Home Article models registrations
 class ParagraphInline(admin.TabularInline):
     model = Paragraph
     extra = 1
@@ -139,7 +140,7 @@ class HomeArticle9Admin(admin.ModelAdmin):
 
 admin.site.register(Home_article_9, HomeArticle9Admin)
 
-
+# News Article models registrations
 
 class ParagraphInline(admin.TabularInline):
     model = Paragraph1a
@@ -233,7 +234,7 @@ class NewsArticle9aAdmin(admin.ModelAdmin):
 
 admin.site.register(News_article_9, NewsArticle9aAdmin)
 
-
+# Transfers Article models registrations
 
 class ParagraphInline(admin.TabularInline):
     model = Paragraph11
@@ -297,3 +298,36 @@ class TransferArticle6Admin(admin.ModelAdmin):
     inlines = [ParagraphInline]
 
 admin.site.register(Transfer_article_6, TransferArticle6Admin)
+
+
+
+class ParagraphInline(admin.TabularInline):
+    model = Paragraph17
+    extra = 1
+
+class TransferArticle7Admin(admin.ModelAdmin):
+    inlines = [ParagraphInline]
+
+admin.site.register(Transfer_article_7, TransferArticle7Admin)
+
+
+
+class ParagraphInline(admin.TabularInline):
+    model = Paragraph18
+    extra = 1
+
+class TransferArticle8Admin(admin.ModelAdmin):
+    inlines = [ParagraphInline]
+
+admin.site.register(Transfer_article_8, TransferArticle8Admin)
+
+
+
+class ParagraphInline(admin.TabularInline):
+    model = Paragraph19
+    extra = 1
+
+class TransferArticle9Admin(admin.ModelAdmin):
+    inlines = [ParagraphInline]
+
+admin.site.register(Transfer_article_9, TransferArticle9Admin)

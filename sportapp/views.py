@@ -20,7 +20,7 @@ from .models import Home_article_8,Home_article_9,News_article_1,News_article_2
 from .models import News_article_3,News_article_4,News_article_5,News_article_6
 from .models import News_article_7,News_article_8,News_article_9
 from .models import Transfer_article_1,Transfer_article_2,Transfer_article_3,Transfer_article_4,Transfer_article_5
-from .models import Transfer_article_6
+from .models import Transfer_article_6,Transfer_article_7,Transfer_article_8,Transfer_article_9
 
 
 
@@ -264,10 +264,22 @@ def tranferf(request):
     return render(request, 'transfers-article/tranfer-article-6.html',Context)
 
 def tranferg(request):
-    return render(request, 'transfers-article/tranfer-article-7.html')
+    transfer_articles = Transfer_article_7.objects.all()
+    Context={
+        'transfer_articles':transfer_articles
+    }
+    return render(request, 'transfers-article/tranfer-article-7.html',Context)
 
 def tranferh(request):
-    return render(request, 'transfers-article/tranfer-article-8.html')
+    transfer_articles = Transfer_article_8.objects.all()
+    Context={
+        'transfer_articles':transfer_articles
+    }
+    return render(request, 'transfers-article/tranfer-article-8.html',Context)
 
 def tranferi(request):
-    return render(request, 'transfers-article/tranfer-article-9.html')
+    transfer_articles = Transfer_article_9.objects.all()
+    Context={
+        'transfer_articles':transfer_articles
+    }
+    return render(request, 'transfers-article/tranfer-article-9.html',Context)
