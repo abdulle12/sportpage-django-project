@@ -48,6 +48,8 @@
       
         <li><a href="{% url 'transfer' %}">Tranfers</a></li>
         <hr>
+        <li><a href="{% url 'about' %}">About us</a></li>
+        <hr>
 
 </ul>
 <!--page header-->
@@ -57,35 +59,16 @@
 </div>
 
 <div class="main">
-   
-       <h2>Wasteful Cristiano Ronaldo misses several chances but is left frustrated by Al-Nassr’s leaky defence as they lose more ground in Saudi Pro League title race with woeful loss to Al-Raed
-       </h2>
-   
-   <p>
-    A profligate Cristiano Ronaldo cut a frustrated figure as Al-Nassr's title ambitions effectively went up in smoke after a woeful 3-1 loss to Al-Raed.
-   </p>
+    {% for article in home_articles %}
+        <h2>{{ article.head }}</h2>
+        <p>{{ article.p1 }}</p>
+        <p>{{ article.p2 }}</p>
+        <img src="{{ article.img.url }}" alt="" width="100%">
 
-    <p>
-        It was simply not Ronaldo's night. And it wasn't Al-Nassr's, either. The 39-year-old had plenty of opportunities to stamp his authority in the match but it was not meant to be. The Portuguese was not only denied by the woodwork on two occasions but also, quite uncharacteristically, failed to guide his headers into the net, the sort which
-         are usually bread and butter for the striker. But without a shred of doubt, Al-Raed's victory was well deserved on the night.
-    </p>
-
-<p>Ronaldo & Co were slow off the blocks and the visitors wasted no time in capitalising on their opponent's lack of initiative. David Ospina in the Nassr goal was a busier custodian in the opening quarter as Julio Tavares and Karim El Berkaoui kept asking questions with their frequent goal attempts. And Al-Raed were eventually rewarded when Tavares 
-    set up Berkaoui with a low cross from the left, which the forward slotted home with ease.</p>
- <img src="{% static 'img/ronaldo.webp' %}" alt="" width="100%">
-
- <p>
-    The Knights of Najd woke up from their slumber after falling behind and it was their Portuguese talisman who was in the thick of things to bring them on level terms. Marcelo Brozovic floated in a hopeful cross for Ronaldo, who volleyed it the first time. However, his thunderous shot bounced back off the woodwork before falling kindly for Ayman Yayha, who tapped in
-     on the rebound. As the first half progressed, Ronaldo continued to get more involved but the final touch seemed elusive.
- </p>
-
-<p>
-    Al-Raed regained their advantage within a minute of resumption in the second half as Al-Nassr's defence was caught napping once again. Amir Sayoud drilled in a low cross which was flicked behind by Tavares for an unmarked Mohamed Fouzair who scored from close range. Although Nassr upped their ante in search of an equaliser a wasteful Ronaldo did not help their cause. And Sayoud's late strike in the 87th minute with
-     the outside of his foot was enough to put the match to bed, and potentially seal Nassr's fate in the league.
-</p>.
-
-
-
+        {% for paragraph in article.paragraphs.all %}
+            <p>{{ paragraph.text }}</p>
+        {% endfor %}
+    {% endfor %}
 </div>
 
 

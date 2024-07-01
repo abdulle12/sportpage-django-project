@@ -44,20 +44,18 @@
     <div class="header">
         <h1>Transfers</h1>
     </div>
-    <div class="main">
-        <h2>Transfer news & rumours LIVE: Liverpool & Man City tracking Pedro Neto with Wolves set to demand £60 million for star winger</h2>
-        <p>Transfer news & rumours LIVE: Liverpool & Man City tracking Pedro Neto with Wolves set to demand £60 million for star winger</p>
-        <p>
-            Liverpool & Man City tracking Wolves' Pedro Neto
-            Saudi clubs ready to pay £100m+ for De Bruyne
-            Greenwood to Barca gathers steam after first Man Utd contact
-        </p>
-        <p>
-            Transfer news & rumours LIVE: Liverpool & Man City tracking Pedro Neto with Wolves set to demand £60 million for star winger
-            Transfer news & rumours LIVE: Liverpool & Man City tracking Pedro Neto with Wolves set to demand £60 million for star winger
-        </p>
-        <img src="{% static 'tranfers-article/img/tranfer-image-1.webp' %}" alt="" width="100%">
-    </div>
+<div class="main">
+    {% for article in transfer_articles %}
+    <h2>{{ article.head }}</h2>
+    <p>{{ article.p1 }}</p>
+    <p>{{ article.p2 }}</p>
+    <img src="{{ article.img.url }}" alt="" width="100%">
+
+    {% for paragraph in article.paragraphs.all %}
+        <p>{{ paragraph.text }}</p>
+    {% endfor %}
+{% endfor %}
+</div>
     <!--footer-->
     <footer>
         <p>Sport page &copy; 2024</p>

@@ -47,11 +47,16 @@
         <h1>Transfers</h1>
     </div>
     <div class="main">
-        <h2>Does Erling Haaland still have his heart set on Real Madrid? Striker to demand release clause in Man City contract talks that would allow him to join Spanish giants</h2>
-        <p>Erling Haaland will reportedly demand a release clause in his Manchester City contract that would allow him to keep his Real Madrid dream alive.</p>
-        <p>Haaland completed his high-profile transfer from Borussia Dortmund to Manchester City in 2022, signing a five-year deal. However, the striker's representative, Rafaela Pimienta, included a clause allowing the player to depart in the summer of 2024 for a fee affordable to clubs outside England. This clause is said to decrease in value over time, making it an enticing proposition for potential suitors like Real Madrid.</p>
-        <img src="{% static 'tranfers-article/img/tranfer-image-6.webp' %}" alt="" width="100%">
-        <p>According to AS, while City remain keen on extending Haaland's contract, it is believed that Pimienta will continue to negotiate terms that would continue to have a release clause in the new deal, to keep the possibility of a move open. This strategic approach aligns with Haaland's willingness to explore opportunities, particularly with Real Madrid.</p>
+        {% for article in transfer_articles %}
+        <h2>{{ article.head }}</h2>
+        <p>{{ article.p1 }}</p>
+        <p>{{ article.p2 }}</p>
+        <img src="{{ article.img.url }}" alt="" width="100%">
+    
+        {% for paragraph in article.paragraphs.all %}
+            <p>{{ paragraph.text }}</p>
+        {% endfor %}
+    {% endfor %}
     </div>
     <!--footer-->
     <footer>

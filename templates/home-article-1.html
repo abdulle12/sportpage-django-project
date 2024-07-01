@@ -61,14 +61,14 @@
 </div>
 
 <div class="main">
-    {% for article in articlea %}
+    {% for article in home_articles %}
         <h2>{{ article.head }}</h2>
         <p>{{ article.p1 }}</p>
         <p>{{ article.p2 }}</p>
         <img src="{{ article.img.url }}" alt="" width="100%">
 
-        {% for p in article.lastps.all %}
-            <p>{{ p.paragh }}</p>
+        {% for paragraph in article.paragraphs.all %}
+            <p>{{ paragraph.text }}</p>
         {% endfor %}
     {% endfor %}
 </div>

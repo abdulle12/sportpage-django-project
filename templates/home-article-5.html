@@ -57,35 +57,16 @@
 </div>
 
 <div class="main">
-   
-       <h2>
-        Inter Miami player ratings vs Nashville SC: Never count out Lionel Messi and Luis Suarez! Barcelona icons save the day in CONCACAF Champions Cup opener
-       </h2>
-   
-   <p>
-    The two legends stepped up to complete a two-goal comeback that gave the Herons a huge advantage heading into leg two of their Cup tie. 
-   </p>
+    {% for article in home_articles %}
+        <h2>{{ article.head }}</h2>
+        <p>{{ article.p1 }}</p>
+        <p>{{ article.p2 }}</p>
+        <img src="{{ article.img.url }}" alt="" width="100%">
 
-    <p>
-        You just can't fall asleep against this team, can you? Just when you think it's over, just when you think they're dead, Inter Miami somehow find a way. They're talented enough to do that, you know. When you have Lionel
-         Messi and Luis Suarez in your team, games can change in just a second or two.
-    </p>
-
-<p>Several teams felt that last year. The LA Galaxy experienced it early on in this MLS season. This time around, Nashville SC found themselves
-     on the end of a ridiculous Inter Miami comeback, one spearheaded by the two Barcelona icons.</p>
- <img src="{% static 'img/messi.webp' %}" alt="" width="100%">
-
- <p>
-    For most of Thursday night's CONCACAF Champions Cup clash, it felt like Inter Miami were on the ropes. Nashville were up 2-0 moments into
-     the second half and were seemingly cruising. The Herons, though, were down but not out. They're never out of it, really.
- </p>
-
-<p>
-    Messi scored first, firing home a Suarez assist in the 52nd minute. And then, five minutes into stoppage time, it was the Uruguayan's turn as he headed home a ridiculous Sergio Busquets cross.  
-</p>
-
-
-
+        {% for paragraph in article.paragraphs.all %}
+            <p>{{ paragraph.text }}</p>
+        {% endfor %}
+    {% endfor %}
 </div>
 
 

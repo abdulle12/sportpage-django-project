@@ -14,6 +14,15 @@ from .models import Transfepage3
 from .models import Transfepage4
 from .models import League
 from datetime import datetime
+from .models import Home_article_1,Home_article_2,Home_article_3
+from .models import Home_article_4,Home_article_5,Home_article_6,Home_article_7
+from .models import Home_article_8,Home_article_9,News_article_1,News_article_2
+from .models import News_article_3,News_article_4,News_article_5,News_article_6
+from .models import News_article_7,News_article_8,News_article_9
+from .models import Transfer_article_1,Transfer_article_2,Transfer_article_3,Transfer_article_4,Transfer_article_5
+from .models import Transfer_article_6
+
+
 
 
 
@@ -99,55 +108,160 @@ def about(request):
 
 
 def home_articlea(request):
+    home_articles = Home_article_1.objects.all()
+    Context={
+        'home_articles':home_articles
+    }
 
 
-    return render(request, 'home-article-1.html')
+    return render(request, 'home-article-1.html',Context)
 def home_articleb(request):
  
- 
-    return render(request,'home-article-2.html')
+    home_articles = Home_article_2.objects.all()
+    Context={
+        'home_articles':home_articles
+    }
+    return render(request,'home-article-2.html',Context)
 def home_articlec(request):
-  
-    return render(request,'home-article-3.html')
+    home_articles = Home_article_3.objects.all()
+    Context={
+        'home_articles':home_articles
+    }
+    return render(request,'home-article-3.html',Context)
 def home_articled(request):
-    return render(request,'home-article-4.html')
+    home_articles = Home_article_4.objects.all()
+    Context={
+        'home_articles':home_articles
+    }
+    return render(request,'home-article-4.html',Context)
 def home_articlee(request):
-    return render(request,'home-article-5.html')
+    home_articles = Home_article_5.objects.all()
+    Context={
+        'home_articles':home_articles
+    }
+    return render(request,'home-article-5.html',Context)
 def home_articlef(request):
-    return render(request,'home-article-6.html')
+    home_articles = Home_article_6.objects.all()
+    Context={
+        'home_articles':home_articles
+    }
+    return render(request,'home-article-6.html',Context)
 def home_articleg(request):
-    return render(request,'home-article-7.html')
+    home_articles = Home_article_7.objects.all()
+    Context={
+        'home_articles':home_articles
+    }
+    return render(request,'home-article-7.html',Context)
 def home_articleh(request):
-    return render(request,'home-article-8.html')
+    home_articles = Home_article_8.objects.all()
+    Context={
+        'home_articles':home_articles
+    }
+    return render(request,'home-article-8.html',Context)
+def home_articleg(request):
+    home_articles = Home_article_9.objects.all()
+    Context={
+        'home_articles':home_articles
+    }
+    return render(request,'home-article-9.html',Context)
 def newsa(request):
-    return render(request,'News-article/news-article-1.html')
+    news_articles = News_article_1.objects.all()
+    Context={
+        'news_articles':news_articles
+    }
+    return render(request,'News-article/news-article-1.html',Context)
 def newsb(request):
-    return render(request,'News-article/news-article-2.html')
+    news_articles = News_article_2.objects.all()
+    Context={
+        'news_articles':news_articles
+    }
+    return render(request,'News-article/news-article-2.html',Context)
 def newsc(request):
-    return render(request,'News-article/news-article-3.html')
+    news_articles = News_article_3.objects.all()
+    Context={
+        'news_articles':news_articles
+    }
+    return render(request,'News-article/news-article-3.html',Context)
 def newsd(request):
-    return render(request,'News-article/news-article-4.html')
+    news_articles = News_article_4.objects.all()
+    Context={
+        'news_articles':news_articles
+    }
+    return render(request,'News-article/news-article-4.html',Context)
 def newse(request):
-    return render(request,'News-article/news-article-5.html')
+    news_articles = News_article_5.objects.all()
+    Context={
+        'news_articles':news_articles
+    }
+    return render(request,'News-article/news-article-5.html',Context)
+
+def newsg(request):
+    news_articles = News_article_6.objects.all()
+    Context={
+        'news_articles':news_articles
+    }
+    return render(request,'News-article/news-article-6.html',Context)
+
+def newsh(request):
+    news_articles = News_article_7.objects.all()
+    Context={
+        'news_articles':news_articles
+    }
+    return render(request,'News-article/news-article-7.html',Context)
+
+def newsi(request):
+    news_articles = News_article_8.objects.all()
+    Context={
+        'news_articles':news_articles
+    }
+    return render(request,'News-article/news-article-8.html',Context)
 def newsf(request):
-    return render(request,'News-article/news-article-9.html')
+    news_articles = News_article_9.objects.all()
+    Context={
+        'news_articles':news_articles
+    }
+    return render(request,'News-article/news-article-9.html',Context)
 def tranfera(request):
-    return render(request, 'transfers-article/tranfer-article-1.html')
+    transfer_articles = Transfer_article_1.objects.all()
+    Context={
+        'transfer_articles':transfer_articles
+    }
+    return render(request, 'transfers-article/tranfer-article-1.html',Context)
 
 def tranferb(request):
-    return render(request, 'transfers-article/tranfer-article-2.html')
+    transfer_articles = Transfer_article_2.objects.all()
+    Context={
+        'transfer_articles':transfer_articles
+    }
+    return render(request, 'transfers-article/tranfer-article-2.html',Context)
 
 def tranferc(request):
-    return render(request, 'transfers-article/tranfer-article-3.html')
+    transfer_articles = Transfer_article_3.objects.all()
+    Context={
+        'transfer_articles':transfer_articles
+    }
+    return render(request, 'transfers-article/tranfer-article-3.html',Context)
 
 def tranferd(request):
-    return render(request, 'transfers-article/tranfer-article-4.html')
+    transfer_articles = Transfer_article_4.objects.all()
+    Context={
+        'transfer_articles':transfer_articles
+    }
+    return render(request, 'transfers-article/tranfer-article-4.html',Context)
 
 def tranfere(request):
-    return render(request, 'transfers-article/tranfer-article-5.html')
+    transfer_articles = Transfer_article_5.objects.all()
+    Context={
+        'transfer_articles':transfer_articles
+    }
+    return render(request, 'transfers-article/tranfer-article-5.html',Context)
 
 def tranferf(request):
-    return render(request, 'transfers-article/tranfer-article-6.html')
+    transfer_articles = Transfer_article_6.objects.all()
+    Context={
+        'transfer_articles':transfer_articles
+    }
+    return render(request, 'transfers-article/tranfer-article-6.html',Context)
 
 def tranferg(request):
     return render(request, 'transfers-article/tranfer-article-7.html')

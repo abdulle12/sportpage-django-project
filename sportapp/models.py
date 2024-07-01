@@ -92,10 +92,420 @@ class Match(models.Model):
         return f"{self.team1} vs {self.team2} at {self.time}"
 
 
+class Home_article_1(models.Model):
+    head = models.CharField(max_length=100)
+    p1 = models.CharField(max_length=1000)
+    p2 = models.CharField(max_length=1000)
+    img = models.ImageField(upload_to='pic')
+
+    def __str__(self):
+        return self.head
+
+class Paragraph(models.Model):
+    home_article_1 = models.ForeignKey(Home_article_1, related_name='paragraphs', on_delete=models.CASCADE)
+    text = models.CharField(max_length=1000)
+
+    def __str__(self):
+        return f"Paragraph for {self.home_article_1.head}"    
     
-    
+class Home_article_2(models.Model):
+    head = models.CharField(max_length=100)
+    p1 = models.CharField(max_length=1000)
+    p2 = models.CharField(max_length=1000)
+    img = models.ImageField(upload_to='pic')
+
+    def __str__(self):
+        return self.head
+
+class Paragraph2(models.Model):
+    home_article_2 = models.ForeignKey(Home_article_2, related_name='paragraphs', on_delete=models.CASCADE)
+    text = models.CharField(max_length=1000)
+
+    def __str__(self):
+        return f"Paragraph for {self.home_article_2.head}"    
+
+
+class Home_article_3(models.Model):
+    head = models.CharField(max_length=100)
+    p1 = models.CharField(max_length=1000)
+    p2 = models.CharField(max_length=1000)
+    img = models.ImageField(upload_to='pic')
+
+    def __str__(self):
+        return self.head
+
+class Paragraph3(models.Model):
+    home_article_3 = models.ForeignKey(Home_article_3, related_name='paragraphs', on_delete=models.CASCADE)
+    text = models.CharField(max_length=1000)
+
+    def __str__(self):
+        return f"Paragraph for {self.home_article_3.head}"    
+
+
+
+class Home_article_4(models.Model):
+    head = models.CharField(max_length=100)
+    p1 = models.CharField(max_length=1000)
+    p2 = models.CharField(max_length=1000)
+    img = models.ImageField(upload_to='pic')
+
+    def __str__(self):
+        return self.head
+
+class Paragraph4(models.Model):
+    home_article_4 = models.ForeignKey(Home_article_4, related_name='paragraphs', on_delete=models.CASCADE)
+    text = models.CharField(max_length=1000)
+
+    def __str__(self):
+        return f"Paragraph for {self.home_article_4.head}"    
+
+
+class Home_article_5(models.Model):
+    head = models.CharField(max_length=100)
+    p1 = models.CharField(max_length=1000)
+    p2 = models.CharField(max_length=1000)
+    img = models.ImageField(upload_to='pic')
+
+    def __str__(self):
+        return self.head
+
+class Paragraph5(models.Model):
+    Home_article_5 = models.ForeignKey(Home_article_5, related_name='paragraphs', on_delete=models.CASCADE)
+    text = models.CharField(max_length=1000)
+
+    def __str__(self):
+        return f"Paragraph for {self.Home_article_5.head}" 
+
+
+class Home_article_6(models.Model):
+    head = models.CharField(max_length=100)
+    p1 = models.CharField(max_length=1000)
+    p2 = models.CharField(max_length=1000)
+    img = models.ImageField(upload_to='pic')
+
+    def __str__(self):
+        return self.head
+
+class Paragraph6(models.Model):
+    Home_article_6 = models.ForeignKey(Home_article_6, related_name='paragraphs', on_delete=models.CASCADE)
+    text = models.CharField(max_length=1000)
+
+    def __str__(self):
+        return f"Paragraph for {self.Home_article_6.head}" 
     
 
-     
+class Home_article_7(models.Model):
+    head = models.CharField(max_length=100)
+    p1 = models.CharField(max_length=1000)
+    p2 = models.CharField(max_length=1000)
+    img = models.ImageField(upload_to='pic')
 
-   
+    def __str__(self):
+        return self.head
+
+class Paragraph7(models.Model):
+    Home_article_7 = models.ForeignKey(Home_article_7, related_name='paragraphs', on_delete=models.CASCADE)
+    text = models.CharField(max_length=1000)
+
+    def __str__(self):
+        return f"Paragraph for {self.Home_article_7.head}" 
+
+
+class Home_article_8(models.Model):
+    head = models.CharField(max_length=100)
+    p1 = models.CharField(max_length=1000)
+    p2 = models.CharField(max_length=1000)
+    img = models.ImageField(upload_to='pic')
+
+    def __str__(self):
+        return self.head
+
+class Paragraph8(models.Model):
+    Home_article_8 = models.ForeignKey(Home_article_8, related_name='paragraphs', on_delete=models.CASCADE)
+    text = models.CharField(max_length=1000)
+
+    def __str__(self):
+        return f"Paragraph for {self.Home_article_8.head}"
+    
+
+
+class Home_article_9(models.Model):
+    head = models.CharField(max_length=100)
+    p1 = models.CharField(max_length=1000)
+    p2 = models.CharField(max_length=1000)
+    img = models.ImageField(upload_to='pic')
+
+    def __str__(self):
+        return self.head
+
+class Paragraph9(models.Model):
+    Home_article_9 = models.ForeignKey(Home_article_9, related_name='paragraphs', on_delete=models.CASCADE)
+    text = models.CharField(max_length=1000)
+
+    def __str__(self):
+        return f"Paragraph for {self.Home_article_9.head}"
+    
+
+class News_article_1(models.Model):
+    head = models.CharField(max_length=100)
+    p1 = models.CharField(max_length=1000)
+    p2 = models.CharField(max_length=1000)
+    img = models.ImageField(upload_to='pic')
+
+    def __str__(self):
+        return self.head
+
+class Paragraph1a(models.Model):
+    News_article_1 = models.ForeignKey(News_article_1, related_name='paragraphs', on_delete=models.CASCADE)
+    text = models.CharField(max_length=1000)
+
+    def __str__(self):
+        return f"Paragraph for {self.News_article_1.head}"
+
+
+class News_article_2(models.Model):
+    head = models.CharField(max_length=100)
+    p1 = models.CharField(max_length=1000)
+    p2 = models.CharField(max_length=1000)
+    img = models.ImageField(upload_to='pic')
+
+    def __str__(self):
+        return self.head
+
+class Paragraph1b(models.Model):
+    News_article_2 = models.ForeignKey(News_article_2, related_name='paragraphs', on_delete=models.CASCADE)
+    text = models.CharField(max_length=1000)
+
+    def __str__(self):
+        return f"Paragraph for {self.News_article_2.head}" 
+    
+
+
+class News_article_3(models.Model):
+    head = models.CharField(max_length=100)
+    p1 = models.CharField(max_length=1000)
+    p2 = models.CharField(max_length=1000)
+    img = models.ImageField(upload_to='pic')
+
+    def __str__(self):
+        return self.head
+
+class Paragraph1c(models.Model):
+    News_article_3 = models.ForeignKey(News_article_3, related_name='paragraphs', on_delete=models.CASCADE)
+    text = models.CharField(max_length=1000)
+
+    def __str__(self):
+        return f"Paragraph for {self.News_article_3.head}"
+
+
+class News_article_4(models.Model):
+    head = models.CharField(max_length=100)
+    p1 = models.CharField(max_length=1000)
+    p2 = models.CharField(max_length=1000)
+    img = models.ImageField(upload_to='pic')
+
+    def __str__(self):
+        return self.head
+
+class Paragraph1d(models.Model):
+    News_article_4 = models.ForeignKey(News_article_4, related_name='paragraphs', on_delete=models.CASCADE)
+    text = models.CharField(max_length=1000)
+
+    def __str__(self):
+        return f"Paragraph for {self.News_article_4.head}"
+
+
+
+class News_article_5(models.Model):
+    head = models.CharField(max_length=100)
+    p1 = models.CharField(max_length=1000)
+    p2 = models.CharField(max_length=1000)
+    img = models.ImageField(upload_to='pic')
+
+    def __str__(self):
+        return self.head
+
+class Paragraph1e(models.Model):
+    News_article_5 = models.ForeignKey(News_article_5, related_name='paragraphs', on_delete=models.CASCADE)
+    text = models.CharField(max_length=1000)
+
+    def __str__(self):
+        return f"Paragraph for {self.News_article_5.head}" 
+
+
+class News_article_6(models.Model):
+    head = models.CharField(max_length=100)
+    p1 = models.CharField(max_length=1000)
+    p2 = models.CharField(max_length=1000)
+    img = models.ImageField(upload_to='pic')
+
+    def __str__(self):
+        return self.head
+
+class Paragraph1f(models.Model):
+    News_article_6 = models.ForeignKey(News_article_6, related_name='paragraphs', on_delete=models.CASCADE)
+    text = models.CharField(max_length=1000)
+
+    def __str__(self):
+        return f"Paragraph for {self.News_article_6.head}"
+
+
+
+
+class News_article_7(models.Model):
+    head = models.CharField(max_length=100)
+    p1 = models.CharField(max_length=1000)
+    p2 = models.CharField(max_length=1000)
+    img = models.ImageField(upload_to='pic')
+
+    def __str__(self):
+        return self.head
+
+class Paragraph1g(models.Model):
+    News_article_7 = models.ForeignKey(News_article_7, related_name='paragraphs', on_delete=models.CASCADE)
+    text = models.CharField(max_length=1000)
+
+    def __str__(self):
+        return f"Paragraph for {self.News_article_7.head}"
+
+
+class News_article_8(models.Model):
+    head = models.CharField(max_length=100)
+    p1 = models.CharField(max_length=1000)
+    p2 = models.CharField(max_length=1000)
+    img = models.ImageField(upload_to='pic')
+
+    def __str__(self):
+        return self.head
+
+class Paragraph1h(models.Model):
+    News_article_8 = models.ForeignKey(News_article_8, related_name='paragraphs', on_delete=models.CASCADE)
+    text = models.CharField(max_length=1000)
+
+    def __str__(self):
+        return f"Paragraph for {self.News_article_8.head}"
+
+
+
+class News_article_9(models.Model):
+    head = models.CharField(max_length=100)
+    p1 = models.CharField(max_length=1000)
+    p2 = models.CharField(max_length=1000)
+    img = models.ImageField(upload_to='pic')
+
+    def __str__(self):
+        return self.head
+
+class Paragraph1i(models.Model):
+    News_article_9 = models.ForeignKey(News_article_9, related_name='paragraphs', on_delete=models.CASCADE)
+    text = models.CharField(max_length=1000)
+
+    def __str__(self):
+        return f"Paragraph for {self.News_article_9.head}"  
+
+
+class Transfer_article_1(models.Model):
+    head = models.CharField(max_length=100)
+    p1 = models.CharField(max_length=1000)
+    p2 = models.CharField(max_length=1000)
+    img = models.ImageField(upload_to='pic')
+
+    def __str__(self):
+        return self.head
+
+class Paragraph11(models.Model):
+    Transfer_article_1 = models.ForeignKey(Transfer_article_1, related_name='paragraphs', on_delete=models.CASCADE)
+    text = models.CharField(max_length=1000)
+
+    def __str__(self):
+        return f"Paragraph for {self.Transfer_article_1.head}" 
+
+
+class Transfer_article_2(models.Model):
+    head = models.CharField(max_length=100)
+    p1 = models.CharField(max_length=1000)
+    p2 = models.CharField(max_length=1000)
+    img = models.ImageField(upload_to='pic')
+
+    def __str__(self):
+        return self.head
+
+class Paragraph12(models.Model):
+    Transfer_article_2 = models.ForeignKey(Transfer_article_2, related_name='paragraphs', on_delete=models.CASCADE)
+    text = models.CharField(max_length=1000)
+
+    def __str__(self):
+        return f"Paragraph for {self.Transfer_article_2.head}"
+    
+
+class Transfer_article_3(models.Model):
+    head = models.CharField(max_length=100)
+    p1 = models.CharField(max_length=1000)
+    p2 = models.CharField(max_length=1000)
+    img = models.ImageField(upload_to='pic')
+
+    def __str__(self):
+        return self.head
+
+class Paragraph13(models.Model):
+    Transfer_article_3 = models.ForeignKey(Transfer_article_3, related_name='paragraphs', on_delete=models.CASCADE)
+    text = models.CharField(max_length=1000)
+
+    def __str__(self):
+        return f"Paragraph for {self.Transfer_article_3.head}"
+
+
+
+class Transfer_article_4(models.Model):
+    head = models.CharField(max_length=100)
+    p1 = models.CharField(max_length=1000)
+    p2 = models.CharField(max_length=1000)
+    img = models.ImageField(upload_to='pic')
+
+    def __str__(self):
+        return self.head
+
+class Paragraph14(models.Model):
+    Transfer_article_4 = models.ForeignKey(Transfer_article_4, related_name='paragraphs', on_delete=models.CASCADE)
+    text = models.CharField(max_length=1000)
+
+    def __str__(self):
+        return f"Paragraph for {self.Transfer_article_4.head}" 
+
+
+
+class Transfer_article_5(models.Model):
+    head = models.CharField(max_length=100)
+    p1 = models.CharField(max_length=1000)
+    p2 = models.CharField(max_length=1000)
+    img = models.ImageField(upload_to='pic')
+
+    def __str__(self):
+        return self.head
+
+class Paragraph15(models.Model):
+    Transfer_article_5 = models.ForeignKey(Transfer_article_5, related_name='paragraphs', on_delete=models.CASCADE)
+    text = models.CharField(max_length=1000)
+
+    def __str__(self):
+        return f"Paragraph for {self.Transfer_article_5.head}"
+    
+
+class Transfer_article_6(models.Model):
+    head = models.CharField(max_length=100)
+    p1 = models.CharField(max_length=1000)
+    p2 = models.CharField(max_length=1000)
+    img = models.ImageField(upload_to='pic')
+
+    def __str__(self):
+        return self.head
+
+class Paragraph16(models.Model):
+    Transfer_article_6 = models.ForeignKey(Transfer_article_6, related_name='paragraphs', on_delete=models.CASCADE)
+    text = models.CharField(max_length=1000)
+
+    def __str__(self):
+        return f"Paragraph for {self.Transfer_article_6.head}"   
+
+
+

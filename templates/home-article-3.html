@@ -59,19 +59,16 @@
     <h1>Top story</h1>
 </div>
 <div class="main">
-    {% for articlec in articlesc %}
-    <h2>{{ articlec.head }}</h2>
-    <p>{{ articlec.p1 }}</p>
-    <p>{{ articlec.p2 }}</p>
+    {% for article in home_articles %}
+        <h2>{{ article.head }}</h2>
+        <p>{{ article.p1 }}</p>
+        <p>{{ article.p2 }}</p>
+        <img src="{{ article.img.url }}" alt="" width="100%">
 
-
-    <img src="{{ articlec.img.url }}" alt="" width="100%">
-
-    {% for p in articlec.lastps.all %}
-        <p>{{ p.paragh }}</p>
+        {% for paragraph in article.paragraphs.all %}
+            <p>{{ paragraph.text }}</p>
+        {% endfor %}
     {% endfor %}
-    {% endfor %}
-
 </div>
 
 

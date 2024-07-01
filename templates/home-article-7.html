@@ -49,6 +49,8 @@
       
         <li><a href="{% url 'transfer' %}">Tranfers</a></li>
         <hr>
+        <li><a href="{% url 'about' %}">About us</a></li>
+        <hr>
 
 </ul>
 <!--page header-->
@@ -58,34 +60,16 @@
 </div>
 
 <div class="main">
-   
-       <h2>Jurgen Klopp’s entertainers! Darwin Nunez stunner brings up landmark 
-        milestone for Liverpool boss during final season on Merseyside.
-       </h2>
-   
-   <p>
-    Since Klopp arrived at Anfield in 2015, Liverpool have been a free-scoring unit, consistently finding the back of the net across competitions. And Thursday evening was no exception as they thrashed Sparta
-     Prague 5-1 in a Europa League last-16 encounter.
-   </p>
+    {% for article in home_articles %}
+        <h2>{{ article.head }}</h2>
+        <p>{{ article.p1 }}</p>
+        <p>{{ article.p2 }}</p>
+        <img src="{{ article.img.url }}" alt="" width="100%">
 
-    <p>
-        After an early penalty, converted by Alexis Mac Allister, provided the Reds with a slender lead, Nunez showcased his striking prowess with a thunderous long-range effort to score the 1000th goal of the Klopp era in just 476 games. Liverpool have been averaging 2.10 goals per game under Klopp and to
-         surpass the 1000-goal mark before his final swansong in the summer will be a special occasion for the German coach.
-    </p>
-
-<p>Klopp has been key to bringing out the best from Nunez, with the Uruguayan forward emerging to be instrumental in Liverpool's recent attacking exploits. His clinical finishing was on display once again as he netted his second goal of the game just before halftime in a similar impressive fashion. With a tally of 16 goals and 11 assists this season, Nunez has emerged as a crucial component
-     of Liverpool's attacking arsenal, particularly in the absence of star forward Mohamed Salah.</p>
- <img src="{% static 'img/klop.webp' %}" alt="" width="100%">
-
- <p>
-    Klopp will have little time to celebrate this historic achievement, though, as attention now turns to their upcoming Premier League clash against Manchester City at Anfield on Sunday. With Klopp's side currently leading the title race by a 
-    single point, the showdown against their closest rivals holds immense significance in their pursuit of Premier League glory.
- </p>
-
-
-
-
-
+        {% for paragraph in article.paragraphs.all %}
+            <p>{{ paragraph.text }}</p>
+        {% endfor %}
+    {% endfor %}
 </div>
 
 

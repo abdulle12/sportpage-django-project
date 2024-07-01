@@ -45,21 +45,20 @@
 
     <!--page header-->
     <div class="header">
-        <h1>Top story</h1>
+        <h1>Breaking News</h1>
     </div>
 
     <div class="main">
-        <h2>Luis Suarez saves the day! Ex-Barcelona star nets last-gasp equalizer in Inter Miami's CONCACAF Champions Cup draw with Nashville SC</h2>
-        <p>
-            Luis Suarez provided Inter Miami with a huge late goal, netting in the 95th minute to secure a 2-2 draw in the club's CONCACAF Champions Cup opener.
-        </p>
-        <p>
-            In the final moments of Thursday's CONCACAF Champions Cup opener, Inter Miami found themselves down 2-1. Lionel Messi had brought them back within a goal thanks to a Suarez assist but, five minutes into stoppage time, Suarez made his mark with a goal of his own.
-        </p>
-        <p>
-            For that goal, Suarez combined with another former Barca teammate, Sergio Busquets. The midfielder's perfectly-placed cross fell right onto Suarez's head as he fired home a crucial away goal to level the score at 2-2.
-        </p>
-        <img src="{% static 'News-article/img/squiz.webp' %}" alt="" width="100%">
+        {% for article in news_articles %}
+            <h2>{{ article.head }}</h2>
+            <p>{{ article.p1 }}</p>
+            <p>{{ article.p2 }}</p>
+            <img src="{{ article.img.url }}" alt="" width="100%">
+    
+            {% for paragraph in article.paragraphs.all %}
+                <p>{{ paragraph.text }}</p>
+            {% endfor %}
+        {% endfor %}
     </div>
 
     <!--footer-->

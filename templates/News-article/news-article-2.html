@@ -50,23 +50,16 @@
     </div>
 
     <div class="main">
-        <h2>Brandon Vazquez scores the winner against former club FC Cincinnati! USMNT striker nets deciding strike for Monterrey in Concacaf Champions Cup clash</h2>
-        <p>
-            In their Concacaf Champions Cup leg one clash Thursday night, Vazquez beat two of his former teammates, turning defender Matt Miazga in a circle only to fire home under the hands of Roman Celentano in net. The 25-year-old refused to celebrate at TQL Stadium,
-            though, issuing a sign of respect to his former club and fans.
-        </p>
-        <p>
-            The first half strike, however, ended up being the deciding effort between the two sides in a contested match.
-        </p>
-        <p>
-            The match marked the USMNT striker's return to FCC after his January transfer to Rayados. In his 11th appearance for the Mexican club, he netted his seventh goal across all competitions Saturday. His incredible form in front of net has caught the eyes of many, and now, he's one to watch for this March's
-            USMNT Roster for the Concacaf Nations League semifinals against Jamaica on March 21.
-        </p>
-        <img src="{% static 'News-article/img/news-image-1.webp' %}" alt="" width="100%">
-        <p>
-            The Mexican club return to Liga MX action this weekend, clashing with Mazatlan FC. Then, they'll host FCC in leg two of the tie on March 14, looking to advance to the next round.
-            With an ever-important away goal, and a 1-0 advantage, they are in pole position.
-        </p>
+        {% for article in news_articles %}
+            <h2>{{ article.head }}</h2>
+            <p>{{ article.p1 }}</p>
+            <p>{{ article.p2 }}</p>
+            <img src="{{ article.img.url }}" alt="" width="100%">
+    
+            {% for paragraph in article.paragraphs.all %}
+                <p>{{ paragraph.text }}</p>
+            {% endfor %}
+        {% endfor %}
     </div>
 
     <!--footer-->

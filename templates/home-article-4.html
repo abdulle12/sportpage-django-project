@@ -56,35 +56,17 @@
 </div>
 
 <div class="main">
-   
-       <h2>
-        Graham Potter, Roberto De Zerbi and the candidates to succeed struggling Erik ten Hag as Man Utd manager - ranked
-       </h2>
-   
-   <p>
-    The Dutchman is on borrowed time at Old Trafford after humiliation in the Manchester derby - but who should replace him?
-   </p>
+    {% for article in home_articles %}
+        <h2>{{ article.head }}</h2>
+        <p>{{ article.p1 }}</p>
+        <p>{{ article.p2 }}</p>
+        <img src="{{ article.img.url }}" alt="" width="100%">
 
-
-    <p>
-        Erik ten Hag has done his very best to change things at Manchester United, but after almost two seasons, his team look to be in an even worse state than when he arrived. An excellent first campaign which delivered silverware and a third-placed finish in the Premier League has given way to a harrowing second season, with United falling at the first hurdle in
-         the Champions League and effectively surrendering in the fight to finish in the top four, currently languishing in sixth.
-        
-    </p>
-
-<p>
-    The Dutchman has been allowed to spend £464 million ($590m) on transfers, but still has a squad that pales in comparison to the likes of Manchester City, Liverpool and Arsenal, while he
-     has failed to instil a style of play which fans can get behind, demonstrated by his alarmingly negative tactics in the Manchester derby.
-
-</p>
-
- <img src="{% static 'img/GOAL_-_Multiple_Images_-_3_Stacked_-_Facebook_(24).webp' %}" alt="" width="100%">
-
- <p>
-
-   Meanwhile, Sir Jim Ratcliffe and his INEOS team have taken control of the club's football operation and are targeting a Premier League title within three years. On current evidence, 
-   Ten Hag is not capable of delivering that and it is looking increasingly likely that he will not make it to next season.
- </p>
+        {% for paragraph in article.paragraphs.all %}
+            <p>{{ paragraph.text }}</p>
+        {% endfor %}
+    {% endfor %}
+</div>
 
  
  

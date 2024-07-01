@@ -56,32 +56,16 @@
 </div>
 
 <div class="main">
-   
-       <h2>UEFA country coefficient: Where Premier League,
-         Serie A, La Liga & Bundesliga rank in race for extra Champions League place
-       </h2>
-   
-   <p>
-    Two European leagues will receive an additional place apiece in the group stage of the 2023-24
-     tournament - and this season's results will be key
-   </p>
+    {% for article in home_articles %}
+        <h2>{{ article.head }}</h2>
+        <p>{{ article.p1 }}</p>
+        <p>{{ article.p2 }}</p>
+        <img src="{{ article.img.url }}" alt="" width="100%">
 
-    <p>
-        The Champions League is set to be expanded next season, meaning more teams and more games. Indeed, there will be four additional clubs in the group stage, 
-        as the number of participants rises from 32 to 36.
-    </p>
-
-<p>One of the additional places will go to the team that finishes third in the domestic league sitting fifth in UEFA's league coefficient rankings (France's Ligue 1 in this instance), which are based on results over five seasons up until the end of the 2022-23 campaign, while another will be taken by
-     a domestic champion, with the number teams qualifying via the 'champions path' set to increase from four to five.</p>
- <img src="{% static 'img/halland.webp' %}" alt="" width="100%">
-
- <p>
-    However, the new 'European Performance Spots' will be awarded to the two leagues with the best results from the previous season's UEFA club competitions.
- </p>
-
-
-
-
+        {% for paragraph in article.paragraphs.all %}
+            <p>{{ paragraph.text }}</p>
+        {% endfor %}
+    {% endfor %}
 </div>
 
 
