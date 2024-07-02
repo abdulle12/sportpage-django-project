@@ -33,6 +33,13 @@
             <li><a href="{% url 'news' %}">Breaking News</a></li>
             <li><a href="{% url 'transfer' %}">Tranfers</a></li>
             <li><a href="{% url 'about' %}">About us</a></li>
+            {% if user.is_authenticated %}
+            <li>hello,{{user.first_name}}</li>
+            <li><a href="accounts/logout">Sign out</a></li>
+            {% else %}
+            <li><a href="accounts/register">Get started</a></li>
+            <li><a href="accounts/login">Sign in</a></li>
+            {% endif %}
 
         </ul>
 
@@ -53,6 +60,10 @@
         <hr>
       
         <li><a href="{% url 'about' %}">About us</a></li>
+        <hr>
+        <li><a href="accounts/register">Get started</a></li>
+        <hr>
+        <li><a href="accounts/login">Sign in</a></li>
         <hr>
       
 
