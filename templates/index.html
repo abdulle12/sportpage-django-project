@@ -61,9 +61,15 @@
       
         <li><a href="{% url 'about' %}">About</a></li>
         <hr>
-        <li><a href="accounts/register">Sign Up</a></li>
+        {% if user.is_authenticated %}
+        
+        <li><a href="accounts/logout">Sign out</a></li>
+        <hr>
+        {% else %}
+        <li><a href="accounts/register">Sign up</a></li>
         <hr>
         <li><a href="accounts/login">Sign in</a></li>
+        {% endif %}
         <hr>
       
 
