@@ -65,10 +65,10 @@ header {
 }
 .links a {
     color:white;
-    font-size: 18px;
+    font-size: 15px;
 }
 h2 {
-    font-size: 20px;
+    font-size: 18px;
 }
 .menu img {
     display: none;
@@ -111,7 +111,7 @@ h2 {
 
 /* responsive */
 
-@media  (max-width: 766px) {
+@media  (max-width: 810px) {
     .links {
         display: none;
     }

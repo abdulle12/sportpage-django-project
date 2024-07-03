@@ -6,8 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'index.css' %}">
 </head>
 <body>
+
+
+    <header>
+        <div class="logo">
+            <img src="{% static 'img/1-removebg-preview.png' %}" alt="">
+            <h2>sport page</h2>
+        </div>
+        
+        <div class="menu" id="menu-icon" >
+            <img src="{% static 'img/bx-menu.png' %}" alt="" id="menu-icon">
+        </div>
+        
+        <ul class="links">
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'livescore' %}">Livescores</a></li>
+            <li><a href="{% url 'news' %}">Breaking News</a></li>
+            <li><a href="{% url 'transfer' %}">Tranfers</a></li>
+            <li><a href="{% url 'about' %}">About us</a></li>
+            {% if user.is_authenticated %}
+            <!-- <li>hello,{{user.first_name}}</li> -->
+            <li><a href="accounts/logout">Sign out</a></li>
+            {% else %}
+            <li><a href="{% url 'register' %}">Sign up</a></li>
+            <li><a href="{% url 'login' %}">Sign in</a></li>
+            {% endif %}
+
+        </ul>
+
+
+        
+       
+    </header>
+    <ul class="navbar" id="navbar">
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <hr>
+        <li><a href="{% url 'livescore' %}">Livescores</a></li>
+        <hr>
+      
+        <li><a href="{% url 'news' %}">Breaking News</a></li>
+        <hr>
+      
+        <li><a href="{% url 'transfer' %}">Tranfers</a></li>
+        <hr>
+      
+        <li><a href="{% url 'about' %}">About</a></li>
+        <hr>
+        <li><a href="accounts/register">Sign up</a></li>
+        <hr>
+        <li><a href="accounts/login">Sign in</a></li>
+        <hr>
+      
+
+</ul>
+
+
+
+
+
+
+
+
     <div class="container">
         <h2>Sign up</h2>
         <form method="POST" action="{% url 'register' %}">
@@ -48,5 +112,9 @@
             <button type="submit" class="btn">Sign up</button>
         </form>
     </div>
+    <footer>
+
+        <p>Sport page &copy; 2024</p>
+    </footer>
 </body>
 </html>
