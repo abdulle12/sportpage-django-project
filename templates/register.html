@@ -9,8 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500;600;700;800;900&display=swap"
     rel="stylesheet">
     <link rel="stylesheet" href="{% static 'index.css' %}">
+    
 </head>
-<body>
+<body style="height: 81vh;">
 
 
     <header>
@@ -28,10 +29,10 @@
             <li><a href="{% url 'livescore' %}">Livescores</a></li>
             <li><a href="{% url 'news' %}">Breaking News</a></li>
             <li><a href="{% url 'transfer' %}">Tranfers</a></li>
-            <li><a href="{% url 'about' %}">About us</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
             {% if user.is_authenticated %}
             <!-- <li>hello,{{user.first_name}}</li> -->
-            <li><a href="accounts/logout">Sign out</a></li>
+            <li><a href="{% url 'logout' %}">Sign out</a></li>
             {% else %}
             <li><a href="{% url 'register' %}">Sign up</a></li>
             <li><a href="{% url 'login' %}">Sign in</a></li>
@@ -48,19 +49,21 @@
         <hr>
         <li><a href="{% url 'livescore' %}">Livescores</a></li>
         <hr>
-      
         <li><a href="{% url 'news' %}">Breaking News</a></li>
         <hr>
-      
         <li><a href="{% url 'transfer' %}">Tranfers</a></li>
         <hr>
-      
         <li><a href="{% url 'about' %}">About</a></li>
         <hr>
-        <li><a href="accounts/register">Sign up</a></li>
+        {% if user.is_authenticated %}
+        <!-- <li>hello,{{user.first_name}}</li> -->
+        <li><a href="{% url 'logout' %}">Sign out</a></li>
+        {% else %}
+        <li><a href="{% url 'register' %}">Sign up</a></li>
         <hr>
-        <li><a href="accounts/login">Sign in</a></li>
+        <li><a href="{% url 'login' %}">Sign in</a></li>
         <hr>
+        {% endif %}
       
 
 </ul>
@@ -112,9 +115,10 @@
             <button type="submit" class="btn">Sign up</button>
         </form>
     </div>
-    <footer>
+    <footer style="margin-top:100px;">
 
         <p>Sport page &copy; 2024</p>
     </footer>
+    <script src="{% static 'index.js' %}"></script>
 </body>
 </html>

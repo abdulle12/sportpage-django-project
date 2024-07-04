@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="{% static 'index.css' %}">
     
 </head>
-<body>
+<body style="height: 81vh;">
     
     <header>
         <div class="logo">
@@ -20,7 +20,7 @@
             <h2>sport page</h2>
         </div>
         
-        <div class="menu" id="menu-icon" >
+        <div class="menu" id="menu-icon">
             <img src="{% static 'img/bx-menu.png' %}" alt="" id="menu-icon">
         </div>
         
@@ -31,18 +31,13 @@
             <li><a href="{% url 'transfer' %}">Tranfers</a></li>
             <li><a href="{% url 'about' %}">About</a></li>
             {% if user.is_authenticated %}
-            <!-- <li>hello,{{user.first_name}}</li> -->
-            <li><a href="accounts/logout">Sign out</a></li>
+            <li>hello, {{ user.first_name }}</li>
+            <li><a href="{% url 'logout' %}">Sign out</a></li>
             {% else %}
             <li><a href="{% url 'register' %}">Sign up</a></li>
             <li><a href="{% url 'login' %}">Sign in</a></li>
             {% endif %}
-
         </ul>
-
-
-        
-       
     </header>
     <ul class="navbar" id="navbar">
         <li><a href="{% url 'index' %}">Home</a></li>
@@ -56,15 +51,19 @@
         <li><a href="{% url 'transfer' %}">Tranfers</a></li>
         <hr>
       
-        <li><a href="{% url 'about' %}">About us</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
         <hr>
-        <li><a href="accounts/register">Get started</a></li>
+        {% if user.is_authenticated %}
+        
+        <li><a href="{% url 'logout' %}">Sign out</a></li>
         <hr>
-        <li><a href="accounts/login">Sign in</a></li>
+        {% else %}
+        <li><a href="{% url 'register' %}">Sign up</a></li>
         <hr>
-      
-
-</ul>
+        <li><a href="{% url 'login' %}">Sign in</a></li>
+        {% endif %}
+        <hr>
+    </ul>
 
     <div class="container">
         <h2>Sign in</h2>
@@ -84,5 +83,10 @@
             <button type="submit" class="btn">Sign in</button>
         </form>
     </div>
+    <footer style="margin-top: 271px;">
+
+        <p>Sport page &copy; 2024</p>
+    </footer>
+    <script src="{% static 'index.js' %}"></script>
 </body>
 </html>

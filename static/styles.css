@@ -71,3 +71,9 @@ form {
     grid-template-columns:200px 200px ;
     gap: 5px;
 }
+
+@media  (max-width: 810px) {
+    form{
+        display: block;
+    }
+}

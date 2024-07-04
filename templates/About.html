@@ -1,4 +1,3 @@
-
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -6,16 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sport page</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    
-
     <link rel="stylesheet" href="{% static 'index.css' %}">
     <link rel="stylesheet" href="{% static 'livescore.css' %}">
-    
-   
-
 </head>
 <body>
     <!--navbar-->
@@ -33,73 +26,55 @@
             <li><a href="{% url 'index' %}">Home</a></li>
             <li><a href="{% url 'livescore' %}">Livescores</a></li>
             <li><a href="{% url 'news' %}">Breaking News</a></li>
-            <li><a href="{% url 'transfer' %}">Tranfers</a></li>
-            <li><a href="{% url 'about' %}">About us</a></li>
-
+            <li><a href="{% url 'transfer' %}">Transfers</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            {% if user.is_authenticated %}
+            <li>hello, {{ user.first_name }}</li>
+            <li><a href="{% url 'logout' %}">Sign out</a></li>
+            {% else %}
+            <li><a href="{% url 'register' %}">Sign up</a></li>
+            <li><a href="{% url 'login' %}">Sign in</a></li>
+            {% endif %}
         </ul>
-
-
-        
-       
     </header>
-    <ul class="navbar" id="navbar " >
+    <ul class="navbar" id="navbar">
         <li><a href="{% url 'index' %}">Home</a></li>
         <hr>
         <li><a href="{% url 'livescore' %}">Livescores</a></li>
         <hr>
-      
         <li><a href="{% url 'news' %}">Breaking News</a></li>
         <hr>
-      
-        <li><a href="{% url 'transfer' %}">Tranfers</a></li>
+        <li><a href="{% url 'transfer' %}">Transfers</a></li>
         <hr>
-      
-        <li><a href="{% url 'about' %}">About us</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
         <hr>
-
-</ul>
-<!--page header-->
-
-<div class="header">
-    <h1>About Us:</h1>
-</div>
-<main>
-    <h1>Sport Page</h1>
-    
-    <P>Sport Page is a sport platform that share latest News 
-        about sport in Football .We share here Breaking News  in Football, Tranfers News
-        and Latest score on Football.Join us to never miss the latest sports updates Thank
-        you for connecting us.
-    
-    </P>
-
-    <h1>Contact:</h1>
-    <div class="social">
-        <a href="https://www.youtube.com/@sportpage3103"><i class="bx bxl-youtube"></i></a>
-        <a href="#"><i class="bx bxl-facebook"></i></a>
-        <a href="#"><i class="bx bxl-instagram"></i></a>
-        <a href="#"><i class="bx bxl-twitter"></i></a>
-        <a href="https://ke.linkedin.com/in/aliadenabdille"><i class="bx bxl-linkedin"></i></a>
-
-       
+        {% if user.is_authenticated %}
+        <li><a href="{% url 'logout' %}">Sign out</a></li>
+        <hr>
+        {% else %}
+        <li><a href="{% url 'register' %}">Sign up</a></li>
+        <hr>
+        <li><a href="{% url 'login' %}">Sign in</a></li>
+        {% endif %}
+        <hr>
+    </ul>
+    <!--page header-->
+    <div class="header">
+        <h1>About Us:</h1>
     </div>
-
-
-<!--footer-->
-     
-
-
-    
-
-
-
-
-
-
+    <main>
+        <h1>Sport Page</h1>
+        <p>Sport Page is a sport platform that shares the latest News about sport in Football. We share here Breaking News in Football, Transfers News, and the Latest score on Football. Join us to never miss the latest sports updates. Thank you for connecting with us.</p>
+        <h1>Contact:</h1>
+        <div class="social">
+            <a href="https://www.youtube.com/@sportpage3103"><i class="bx bxl-youtube"></i></a>
+            <a href="#"><i class="bx bxl-facebook"></i></a>
+            <a href="#"><i class="bx bxl-instagram"></i></a>
+            <a href="#"><i class="bx bxl-twitter"></i></a>
+            <a href="https://ke.linkedin.com/in/aliadenabdille"><i class="bx bxl-linkedin"></i></a>
+        </div>
+    </main>
+    <!--footer-->
     <script src="{% static 'index.js' %}"></script>
-
-
-    
-
 </body>
 </html>

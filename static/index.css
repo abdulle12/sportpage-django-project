@@ -17,6 +17,12 @@ h1,h2,h3,p {
     color: #767f7e;
     
 }
+h3 {
+    font-size:16px ;
+}
+p {
+    font-size: 15px;
+}
 body {
     display: block;
 }
