@@ -1,5 +1,5 @@
-Sports Page Application
-Overview
+Sports Page Application:
+
 The Sports Page Application is a comprehensive platform designed to keep sports enthusiasts up-to-date with the latest scores, breaking news, and transfer updates in the world of football. Built with a robust backend using Django and PostgreSQL, and a sleek, responsive frontend using HTML, CSS, and JavaScript, this application ensures a seamless user experience across all devices.
 
 Features
